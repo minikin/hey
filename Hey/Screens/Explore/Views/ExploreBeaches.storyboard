@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ifS-cW-ybS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Explore Beaches View Controller-->
+        <scene sceneID="k4s-MK-vb0">
+            <objects>
+                <viewController storyboardIdentifier="ExploreBeachesViewController" id="ifS-cW-ybS" customClass="ExploreBeachesViewController" customModule="Hey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3P1-ch-QZt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fwU-sf-VZj" userLabel="ExploreBeachesColllectionView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VkH-7T-sqH">
+                                    <size key="itemSize" width="367" height="165"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExploreBeachesCell" id="qsU-uj-bz4">
+                                        <rect key="frame" x="4" y="0.0" width="367" height="165"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="367" height="165"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Q7Y-GZ-ukM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="367" height="191"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iMO-vR-4Un">
+                                                            <rect key="frame" x="0.0" y="0.0" width="367" height="28.5"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YGu-I8-cUe">
+                                                            <rect key="frame" x="0.0" y="30.5" width="367" height="134.5"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="1" green="0.65544757850000002" blue="0.15817786119999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Q7Y-GZ-ukM" secondAttribute="bottom" id="Q5e-7V-WrC"/>
+                                            <constraint firstItem="Q7Y-GZ-ukM" firstAttribute="top" secondItem="qsU-uj-bz4" secondAttribute="top" id="a5m-LT-trW"/>
+                                            <constraint firstAttribute="trailing" secondItem="Q7Y-GZ-ukM" secondAttribute="trailing" id="ekA-et-gzj"/>
+                                            <constraint firstItem="Q7Y-GZ-ukM" firstAttribute="leading" secondItem="qsU-uj-bz4" secondAttribute="leading" id="oTS-x7-c5y"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fwU-sf-VZj" firstAttribute="top" secondItem="bxv-4n-LLW" secondAttribute="top" id="81g-yU-79U"/>
+                            <constraint firstItem="fwU-sf-VZj" firstAttribute="bottom" secondItem="bxv-4n-LLW" secondAttribute="bottom" id="Aer-cJ-hhh"/>
+                            <constraint firstItem="fwU-sf-VZj" firstAttribute="leading" secondItem="bxv-4n-LLW" secondAttribute="leading" id="BvK-r1-7tS"/>
+                            <constraint firstItem="fwU-sf-VZj" firstAttribute="trailing" secondItem="bxv-4n-LLW" secondAttribute="trailing" id="OWl-dH-Yfy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bxv-4n-LLW"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="abL-v6-k9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148" y="155.17241379310346"/>
+        </scene>
+    </scenes>
+</document>
