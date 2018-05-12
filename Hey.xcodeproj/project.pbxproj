@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FCAE018120A7061B00CCFF21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE018020A7061B00CCFF21 /* AppDelegate.swift */; };
-		FCAE018320A7061C00CCFF21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE018220A7061C00CCFF21 /* ViewController.swift */; };
 		FCAE018820A7061C00CCFF21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCAE018720A7061C00CCFF21 /* Assets.xcassets */; };
 		FCAE018B20A7061C00CCFF21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCAE018920A7061C00CCFF21 /* LaunchScreen.storyboard */; };
 		FCAE019B20A7064A00CCFF21 /* Services.h in Headers */ = {isa = PBXBuildFile; fileRef = FCAE019920A7064A00CCFF21 /* Services.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -18,6 +17,15 @@
 		FCAE01B220A709F800CCFF21 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE01B120A709F800CCFF21 /* UIColor+Extensions.swift */; };
 		FCAE01BB20A70B3F00CCFF21 /* ExploreBeachesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE01BA20A70B3F00CCFF21 /* ExploreBeachesViewController.swift */; };
 		FCAE01BF20A70B6F00CCFF21 /* ExploreBeaches.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCAE01BE20A70B6F00CCFF21 /* ExploreBeaches.storyboard */; };
+		FCAE01C220A70E4800CCFF21 /* ControlContainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE01C120A70E4800CCFF21 /* ControlContainable.swift */; };
+		FCAE01C520A70F4800CCFF21 /* Actionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE01C420A70F4800CCFF21 /* Actionable.swift */; };
+		FCAE01C720A7101200CCFF21 /* UIWindow+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE01C620A7101200CCFF21 /* UIWindow+Extensions.swift */; };
+		FCAE01CF20A710D100CCFF21 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE01CE20A710D100CCFF21 /* FavoriteViewController.swift */; };
+		FCAE01D120A710E700CCFF21 /* Favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCAE01D020A710E700CCFF21 /* Favorite.storyboard */; };
+		FCAE01D320A7110800CCFF21 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCAE01D220A7110800CCFF21 /* SignIn.storyboard */; };
+		FCAE01D520A7111E00CCFF21 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE01D420A7111E00CCFF21 /* SignInViewController.swift */; };
+		FCAE01D720A7117200CCFF21 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE01D620A7117200CCFF21 /* MyProfileViewController.swift */; };
+		FCAE01D920A7118600CCFF21 /* MyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCAE01D820A7118600CCFF21 /* MyProfile.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +55,6 @@
 /* Begin PBXFileReference section */
 		FCAE017D20A7061B00CCFF21 /* Hey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCAE018020A7061B00CCFF21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FCAE018220A7061C00CCFF21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FCAE018720A7061C00CCFF21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCAE018A20A7061C00CCFF21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCAE018C20A7061C00CCFF21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +65,17 @@
 		FCAE01B120A709F800CCFF21 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		FCAE01BA20A70B3F00CCFF21 /* ExploreBeachesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreBeachesViewController.swift; sourceTree = "<group>"; };
 		FCAE01BE20A70B6F00CCFF21 /* ExploreBeaches.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExploreBeaches.storyboard; sourceTree = "<group>"; };
+		FCAE01C120A70E4800CCFF21 /* ControlContainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlContainable.swift; sourceTree = "<group>"; };
+		FCAE01C420A70F4800CCFF21 /* Actionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actionable.swift; sourceTree = "<group>"; };
+		FCAE01C620A7101200CCFF21 /* UIWindow+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extensions.swift"; sourceTree = "<group>"; };
+		FCAE01CE20A710D100CCFF21 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		FCAE01D020A710E700CCFF21 /* Favorite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorite.storyboard; sourceTree = "<group>"; };
+		FCAE01D220A7110800CCFF21 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		FCAE01D420A7111E00CCFF21 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		FCAE01D620A7117200CCFF21 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		FCAE01D820A7118600CCFF21 /* MyProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyProfile.storyboard; sourceTree = "<group>"; };
+		FCAE01DB20A7128700CCFF21 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		FCAE01DC20A712AE00CCFF21 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +100,10 @@
 		FCAE017420A7061B00CCFF21 = {
 			isa = PBXGroup;
 			children = (
+				FCAE01DA20A7126500CCFF21 /* Documentation */,
 				FCAE017F20A7061B00CCFF21 /* Hey */,
-				FCAE019820A7064A00CCFF21 /* Services */,
 				FCAE017E20A7061B00CCFF21 /* Products */,
+				FCAE019820A7064A00CCFF21 /* Services */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,7 +121,6 @@
 			children = (
 				FCAE01A420A7065900CCFF21 /* Application */,
 				FCAE01B820A70A9B00CCFF21 /* Screens */,
-				FCAE018220A7061C00CCFF21 /* ViewController.swift */,
 			);
 			path = Hey;
 			sourceTree = "<group>";
@@ -161,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				FCAE01B120A709F800CCFF21 /* UIColor+Extensions.swift */,
+				FCAE01C620A7101200CCFF21 /* UIWindow+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -175,6 +194,8 @@
 		FCAE01AB20A7079800CCFF21 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FCAE01C320A70F3900CCFF21 /* Protocols */,
+				FCAE01C020A70E3100CCFF21 /* Views */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -209,11 +230,13 @@
 			path = AppLifecycle;
 			sourceTree = "<group>";
 		};
-		FCAE01B420A70A6B00CCFF21 /* UserProfile */ = {
+		FCAE01B420A70A6B00CCFF21 /* MyProfile */ = {
 			isa = PBXGroup;
 			children = (
+				FCAE01CB20A710B500CCFF21 /* Views */,
+				FCAE01CA20A710B000CCFF21 /* ViewControllers */,
 			);
-			path = UserProfile;
+			path = MyProfile;
 			sourceTree = "<group>";
 		};
 		FCAE01B520A70A7300CCFF21 /* Explore */ = {
@@ -229,6 +252,8 @@
 		FCAE01B620A70A7D00CCFF21 /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
+				FCAE01C920A710AA00CCFF21 /* Views */,
+				FCAE01C820A710A600CCFF21 /* ViewControllers */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -236,6 +261,8 @@
 		FCAE01B720A70A8F00CCFF21 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				FCAE01CD20A710BE00CCFF21 /* Views */,
+				FCAE01CC20A710BA00CCFF21 /* ViewControllers */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -246,7 +273,7 @@
 				FCAE01B520A70A7300CCFF21 /* Explore */,
 				FCAE01B620A70A7D00CCFF21 /* Favorite */,
 				FCAE01B720A70A8F00CCFF21 /* SignIn */,
-				FCAE01B420A70A6B00CCFF21 /* UserProfile */,
+				FCAE01B420A70A6B00CCFF21 /* MyProfile */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -272,6 +299,79 @@
 			children = (
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FCAE01C020A70E3100CCFF21 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FCAE01C120A70E4800CCFF21 /* ControlContainable.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FCAE01C320A70F3900CCFF21 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FCAE01C420A70F4800CCFF21 /* Actionable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FCAE01C820A710A600CCFF21 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FCAE01CE20A710D100CCFF21 /* FavoriteViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FCAE01C920A710AA00CCFF21 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FCAE01D020A710E700CCFF21 /* Favorite.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FCAE01CA20A710B000CCFF21 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FCAE01D620A7117200CCFF21 /* MyProfileViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FCAE01CB20A710B500CCFF21 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FCAE01D820A7118600CCFF21 /* MyProfile.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FCAE01CC20A710BA00CCFF21 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FCAE01D420A7111E00CCFF21 /* SignInViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FCAE01CD20A710BE00CCFF21 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FCAE01D220A7110800CCFF21 /* SignIn.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FCAE01DA20A7126500CCFF21 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				FCAE01DB20A7128700CCFF21 /* CHANGELOG.md */,
+				FCAE01DC20A712AE00CCFF21 /* README.md */,
+			);
+			path = Documentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,7 +469,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCAE018B20A7061C00CCFF21 /* LaunchScreen.storyboard in Resources */,
+				FCAE01D320A7110800CCFF21 /* SignIn.storyboard in Resources */,
+				FCAE01D920A7118600CCFF21 /* MyProfile.storyboard in Resources */,
 				FCAE018820A7061C00CCFF21 /* Assets.xcassets in Resources */,
+				FCAE01D120A710E700CCFF21 /* Favorite.storyboard in Resources */,
 				FCAE01BF20A70B6F00CCFF21 /* ExploreBeaches.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,10 +491,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCAE018320A7061C00CCFF21 /* ViewController.swift in Sources */,
+				FCAE01D720A7117200CCFF21 /* MyProfileViewController.swift in Sources */,
+				FCAE01C720A7101200CCFF21 /* UIWindow+Extensions.swift in Sources */,
 				FCAE01B220A709F800CCFF21 /* UIColor+Extensions.swift in Sources */,
 				FCAE01BB20A70B3F00CCFF21 /* ExploreBeachesViewController.swift in Sources */,
+				FCAE01C520A70F4800CCFF21 /* Actionable.swift in Sources */,
+				FCAE01D520A7111E00CCFF21 /* SignInViewController.swift in Sources */,
 				FCAE018120A7061B00CCFF21 /* AppDelegate.swift in Sources */,
+				FCAE01CF20A710D100CCFF21 /* FavoriteViewController.swift in Sources */,
+				FCAE01C220A70E4800CCFF21 /* ControlContainable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
