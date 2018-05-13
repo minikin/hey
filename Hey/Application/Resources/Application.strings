@@ -1,0 +1,14 @@
+/* 
+  Application.strings
+  Hey
+
+  Created by Sasha Prokhorenko on 13.05.18.
+  Copyright © 2018 Sasha Prokhorenko. All rights reserved.
+*/
+
+"Title.Navigation" = "Hey Beaches";
+"Title.Navigation.SignIn" = "SignIn";
+
+"UITabBarItem.Title.Explore" = "Explore";
+"UITabBarItem.Title.Favorite" = "Favorite";
+"UITabBarItem.Title.MyProfile" = "My Profile";

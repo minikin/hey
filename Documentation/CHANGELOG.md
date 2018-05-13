@@ -14,14 +14,12 @@
 
 -->
 
-## Master
+# Master
 
 * Upgrade to Swift 5.0 -  Sasha Prokhorenko
-* Follow Force and reduce image quality  - Sasha Prokhorenko
+* Follow Force and reduce image quality  - John Doe
 
-
-### 0.0.1
+## 0.0.1
 
 * Added  Artworks  -  Sasha Prokhorenko
-* Added Home Screen - Sasha Prokhorenko
-
+* Added Home Screen - John Doe

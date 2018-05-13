@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC997A1520A8A17F00514103 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC997A1420A8A17F00514103 /* Coordinator.swift */; };
+		FC997A1720A8A1A800514103 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC997A1620A8A1A800514103 /* AppCoordinator.swift */; };
+		FC997A1920A8A29500514103 /* ContentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC997A1820A8A29500514103 /* ContentCoordinator.swift */; };
+		FC997A1B20A8A2DF00514103 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC997A1A20A8A2DF00514103 /* AuthCoordinator.swift */; };
+		FC997A1D20A8A70300514103 /* Application.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC997A1C20A8A70300514103 /* Application.strings */; };
 		FCAE018120A7061B00CCFF21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE018020A7061B00CCFF21 /* AppDelegate.swift */; };
-		FCAE018820A7061C00CCFF21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCAE018720A7061C00CCFF21 /* Assets.xcassets */; };
+		FCAE018820A7061C00CCFF21 /* Application.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCAE018720A7061C00CCFF21 /* Application.xcassets */; };
 		FCAE018B20A7061C00CCFF21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCAE018920A7061C00CCFF21 /* LaunchScreen.storyboard */; };
 		FCAE019B20A7064A00CCFF21 /* Services.h in Headers */ = {isa = PBXBuildFile; fileRef = FCAE019920A7064A00CCFF21 /* Services.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCAE019E20A7064A00CCFF21 /* Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAE019720A7064A00CCFF21 /* Services.framework */; };
@@ -26,6 +31,8 @@
 		FCAE01D520A7111E00CCFF21 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE01D420A7111E00CCFF21 /* SignInViewController.swift */; };
 		FCAE01D720A7117200CCFF21 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE01D620A7117200CCFF21 /* MyProfileViewController.swift */; };
 		FCAE01D920A7118600CCFF21 /* MyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCAE01D820A7118600CCFF21 /* MyProfile.storyboard */; };
+		FCAE01E320A7158000CCFF21 /* swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = FCAE01E220A7158000CCFF21 /* swiftlint.yml */; };
+		FCAE01E520A7166D00CCFF21 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE01E420A7166D00CCFF21 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,9 +60,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FC997A1420A8A17F00514103 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		FC997A1620A8A1A800514103 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		FC997A1820A8A29500514103 /* ContentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCoordinator.swift; sourceTree = "<group>"; };
+		FC997A1A20A8A2DF00514103 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		FC997A1C20A8A70300514103 /* Application.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Application.strings; sourceTree = "<group>"; };
+		FC997A1F20A8A8A800514103 /* actionable.swifttemplate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = actionable.swifttemplate; sourceTree = "<group>"; };
 		FCAE017D20A7061B00CCFF21 /* Hey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCAE018020A7061B00CCFF21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FCAE018720A7061C00CCFF21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FCAE018720A7061C00CCFF21 /* Application.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Application.xcassets; sourceTree = "<group>"; };
 		FCAE018A20A7061C00CCFF21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCAE018C20A7061C00CCFF21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCAE019720A7064A00CCFF21 /* Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +89,9 @@
 		FCAE01D820A7118600CCFF21 /* MyProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyProfile.storyboard; sourceTree = "<group>"; };
 		FCAE01DB20A7128700CCFF21 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		FCAE01DC20A712AE00CCFF21 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FCAE01E120A7156F00CCFF21 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = swiftgen.yml; sourceTree = "<group>"; };
+		FCAE01E220A7158000CCFF21 /* swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = swiftlint.yml; sourceTree = "<group>"; };
+		FCAE01E420A7166D00CCFF21 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +113,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC997A1320A8912100514103 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FC997A1E20A8A8A800514103 /* Sourcery */ = {
+			isa = PBXGroup;
+			children = (
+				FC997A1F20A8A8A800514103 /* actionable.swifttemplate */,
+			);
+			path = Sourcery;
+			sourceTree = "<group>";
+		};
+		FC997A2320A8AA0600514103 /* Representable */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Representable;
+			sourceTree = "<group>";
+		};
 		FCAE017420A7061B00CCFF21 = {
 			isa = PBXGroup;
 			children = (
 				FCAE01DA20A7126500CCFF21 /* Documentation */,
 				FCAE017F20A7061B00CCFF21 /* Hey */,
 				FCAE017E20A7061B00CCFF21 /* Products */,
+				FCAE01E020A7154C00CCFF21 /* Resources */,
 				FCAE019820A7064A00CCFF21 /* Services */,
 			);
 			sourceTree = "<group>";
@@ -128,6 +167,7 @@
 		FCAE019820A7064A00CCFF21 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FC997A1320A8912100514103 /* Networking */,
 				FCAE01AC20A707EF00CCFF21 /* Utilities */,
 				FCAE019920A7064A00CCFF21 /* Services.h */,
 				FCAE019A20A7064A00CCFF21 /* Info.plist */,
@@ -152,11 +192,11 @@
 		FCAE01A520A7066600CCFF21 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FCAE01B020A7088E00CCFF21 /* Sourcery */,
 				FCAE01AF20A7088700CCFF21 /* Generated */,
-				FCAE018720A7061C00CCFF21 /* Assets.xcassets */,
+				FCAE018720A7061C00CCFF21 /* Application.xcassets */,
 				FCAE018C20A7061C00CCFF21 /* Info.plist */,
 				FCAE018920A7061C00CCFF21 /* LaunchScreen.storyboard */,
+				FC997A1C20A8A70300514103 /* Application.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -187,6 +227,10 @@
 		FCAE01A920A7077300CCFF21 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				FC997A1420A8A17F00514103 /* Coordinator.swift */,
+				FC997A1620A8A1A800514103 /* AppCoordinator.swift */,
+				FC997A1820A8A29500514103 /* ContentCoordinator.swift */,
+				FC997A1A20A8A2DF00514103 /* AuthCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -194,6 +238,7 @@
 		FCAE01AB20A7079800CCFF21 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FC997A2320A8AA0600514103 /* Representable */,
 				FCAE01C320A70F3900CCFF21 /* Protocols */,
 				FCAE01C020A70E3100CCFF21 /* Views */,
 			);
@@ -204,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				FCAE01AD20A7080A00CCFF21 /* Closures.swift */,
+				FCAE01E420A7166D00CCFF21 /* Result.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -213,13 +259,6 @@
 			children = (
 			);
 			path = Generated;
-			sourceTree = "<group>";
-		};
-		FCAE01B020A7088E00CCFF21 /* Sourcery */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Sourcery;
 			sourceTree = "<group>";
 		};
 		FCAE01B320A70A4900CCFF21 /* AppLifecycle */ = {
@@ -242,6 +281,7 @@
 		FCAE01B520A70A7300CCFF21 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
+				FCAE01E620A7172900CCFF21 /* Resources */,
 				FCAE01BD20A70B5200CCFF21 /* ViewModels */,
 				FCAE01BC20A70B4C00CCFF21 /* Views */,
 				FCAE01B920A70B2700CCFF21 /* ViewControllers */,
@@ -252,8 +292,8 @@
 		FCAE01B620A70A7D00CCFF21 /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
-				FCAE01C920A710AA00CCFF21 /* Views */,
 				FCAE01C820A710A600CCFF21 /* ViewControllers */,
+				FCAE01C920A710AA00CCFF21 /* Views */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -261,6 +301,7 @@
 		FCAE01B720A70A8F00CCFF21 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				FCAE01E820A7174A00CCFF21 /* Resources */,
 				FCAE01CD20A710BE00CCFF21 /* Views */,
 				FCAE01CC20A710BA00CCFF21 /* ViewControllers */,
 			);
@@ -272,8 +313,8 @@
 			children = (
 				FCAE01B520A70A7300CCFF21 /* Explore */,
 				FCAE01B620A70A7D00CCFF21 /* Favorite */,
-				FCAE01B720A70A8F00CCFF21 /* SignIn */,
 				FCAE01B420A70A6B00CCFF21 /* MyProfile */,
+				FCAE01B720A70A8F00CCFF21 /* SignIn */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -374,6 +415,30 @@
 			path = Documentation;
 			sourceTree = "<group>";
 		};
+		FCAE01E020A7154C00CCFF21 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FC997A1E20A8A8A800514103 /* Sourcery */,
+				FCAE01E120A7156F00CCFF21 /* swiftgen.yml */,
+				FCAE01E220A7158000CCFF21 /* swiftlint.yml */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FCAE01E620A7172900CCFF21 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FCAE01E820A7174A00CCFF21 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -392,6 +457,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCAE018F20A7061C00CCFF21 /* Build configuration list for PBXNativeTarget "Hey" */;
 			buildPhases = (
+				FCAE01DE20A713B200CCFF21 /* Swiftgen */,
+				FCAE01DD20A7139F00CCFF21 /* SwiftLint */,
+				FCAE01DF20A713C500CCFF21 /* Sourcery */,
 				FCAE017920A7061B00CCFF21 /* Sources */,
 				FCAE017A20A7061B00CCFF21 /* Frameworks */,
 				FCAE017B20A7061B00CCFF21 /* Resources */,
@@ -471,9 +539,11 @@
 				FCAE018B20A7061C00CCFF21 /* LaunchScreen.storyboard in Resources */,
 				FCAE01D320A7110800CCFF21 /* SignIn.storyboard in Resources */,
 				FCAE01D920A7118600CCFF21 /* MyProfile.storyboard in Resources */,
-				FCAE018820A7061C00CCFF21 /* Assets.xcassets in Resources */,
+				FCAE01E320A7158000CCFF21 /* swiftlint.yml in Resources */,
+				FCAE018820A7061C00CCFF21 /* Application.xcassets in Resources */,
 				FCAE01D120A710E700CCFF21 /* Favorite.storyboard in Resources */,
 				FCAE01BF20A70B6F00CCFF21 /* ExploreBeaches.storyboard in Resources */,
+				FC997A1D20A8A70300514103 /* Application.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,19 +556,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FCAE01DD20A7139F00CCFF21 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+		FCAE01DE20A713B200CCFF21 /* Swiftgen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftgen;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+		FCAE01DF20A713C500CCFF21 /* Sourcery */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Sourcery;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FCAE017920A7061B00CCFF21 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC997A1720A8A1A800514103 /* AppCoordinator.swift in Sources */,
+				FC997A1B20A8A2DF00514103 /* AuthCoordinator.swift in Sources */,
 				FCAE01D720A7117200CCFF21 /* MyProfileViewController.swift in Sources */,
 				FCAE01C720A7101200CCFF21 /* UIWindow+Extensions.swift in Sources */,
+				FC997A1520A8A17F00514103 /* Coordinator.swift in Sources */,
 				FCAE01B220A709F800CCFF21 /* UIColor+Extensions.swift in Sources */,
 				FCAE01BB20A70B3F00CCFF21 /* ExploreBeachesViewController.swift in Sources */,
 				FCAE01C520A70F4800CCFF21 /* Actionable.swift in Sources */,
 				FCAE01D520A7111E00CCFF21 /* SignInViewController.swift in Sources */,
 				FCAE018120A7061B00CCFF21 /* AppDelegate.swift in Sources */,
 				FCAE01CF20A710D100CCFF21 /* FavoriteViewController.swift in Sources */,
+				FC997A1920A8A29500514103 /* ContentCoordinator.swift in Sources */,
 				FCAE01C220A70E4800CCFF21 /* ControlContainable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +626,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCAE01E520A7166D00CCFF21 /* Result.swift in Sources */,
 				FCAE01AE20A7080A00CCFF21 /* Closures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
