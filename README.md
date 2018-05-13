@@ -4,9 +4,9 @@ Hey is an iOS demo application.
 
 ## Meta
 
-**State:** development
-**Point People:**  [Sasha Prokhorenko](mailto: djminiki@gmail.com)
-**CI:** _ci status_
+* **State:** development
+* **Point People:** [Sasha Prokhorenko](https://github.com/minikin)
+* **CI:** _ci status_
 
 ----------
 

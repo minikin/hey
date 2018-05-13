@@ -1,14 +1,9 @@
 BREW := $(shell command -v brew 2> /dev/null)
-BUNDLER := $(shell command -v bundler 2> /dev/null)
 COCOAPODS := $(shell command -v pod 2> /dev/null)
 
 setup:
 ifndef BREW
     $(error "Please install homebrew before running `make setup`: https://brew.sh")
-endif
-
-ifndef BUNDLER
-	$(error "Please install Bundler to continue: http://bundler.io")
 endif
 
 ifndef COCOAPODS
