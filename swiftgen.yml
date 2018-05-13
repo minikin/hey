@@ -1,0 +1,21 @@
+input_dir: Hey/
+output_dir: Hey/Application/Resources/Generated
+xcassets:
+  paths:
+    - Application/Resources/Application.xcassets
+  templateName: swift4
+  output: UIImage+Asset.swift
+strings:
+  paths: 
+    - Application/Resources/Application.strings
+  templateName: structured-swift4
+  output: Localized.swift
+storyboards:
+  paths:
+    - Application/Resources
+    - Screens/Explore/Views
+    - Screens/Favorite/Views
+    - Screens/MyProfile/Views
+    - Screens/SignIn/Views
+  templateName: swift4
+  output: Storyboards.swift

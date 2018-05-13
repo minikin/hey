@@ -20,6 +20,7 @@ final class AuthCoordinator: Coordinator {
 
   var childCoordinators: [Coordinator] = []
   let baseController: UIViewController
+  weak var delegate: Delegate?
 
   // MARK: - Initialization
 
@@ -35,4 +36,14 @@ final class AuthCoordinator: Coordinator {
     childCoordinators.first?.cleanup(animated: animated, completion: completion)
   }
 
+}
+
+// MARK: - Actionable
+
+extension AuthCoordinator: Actionable {
+  enum Action {
+    case didSignIn
+    case didFailToSignIn
+    case authenticated
+  }
 }
