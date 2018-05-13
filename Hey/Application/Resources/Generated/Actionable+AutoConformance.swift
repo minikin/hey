@@ -20,3 +20,19 @@ extension AuthCoordinator {
     }
 
 }
+
+// MARK: - SignInViewController
+protocol SignInViewControllerDelegate: AnyObject {
+    func signInViewController(_ vc: SignInViewController, didNotify action: SignInViewController.Action)
+}
+
+extension SignInViewController {
+
+    typealias ActionType = Action
+    typealias Delegate = SignInViewControllerDelegate
+
+    func notify(_ action: ActionType) {
+        delegate?.signInViewController(self, didNotify: action)
+    }
+
+}

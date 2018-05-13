@@ -7,7 +7,7 @@
 //
 
 import UIKit
-///
+
 final class ControlContainableCollectionView: UICollectionView {
   override func touchesShouldCancel(in view: UIView) -> Bool {
     if view is UIControl

@@ -28,7 +28,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExploreBeachesCell" id="qsU-uj-bz4">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExploreBeachesCell" id="qsU-uj-bz4" customClass="ExploreCell" customModule="Hey" customModuleProvider="target">
                                         <rect key="frame" x="4" y="0.0" width="367" height="165"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -58,6 +58,10 @@
                                             <constraint firstAttribute="trailing" secondItem="Q7Y-GZ-ukM" secondAttribute="trailing" id="ekA-et-gzj"/>
                                             <constraint firstItem="Q7Y-GZ-ukM" firstAttribute="leading" secondItem="qsU-uj-bz4" secondAttribute="leading" id="oTS-x7-c5y"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="beachNameLabel" destination="iMO-vR-4Un" id="dgV-Qu-y78"/>
+                                            <outlet property="beachPhoto" destination="YGu-I8-cUe" id="wEI-MG-jUb"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

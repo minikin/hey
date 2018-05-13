@@ -8,10 +8,45 @@
 
 import UIKit
 
-class SignInViewController: UIViewController {
+final class SignInViewController: UIViewController {
+
+  // MARK: - IBOutlets
+
+  @IBOutlet var userEmailTextField: UITextField!
+  @IBOutlet var passwordTextField: UITextField!
+  @IBOutlet var signInButton: LoginButton!
+
+  // MARK: - Properties
+
+  weak var delegate: Delegate?
+
+  // MARK: - ViewController LifeCycle
+
   override func viewDidLoad() {
     super.viewDidLoad()
+  }
 
-    // Do any additional setup after loading the view.
+  // MARK: - Helpers
+
+  private func signInSuccessed() {
+    self.notify(.didSignIn)
+  }
+
+  private func loginFailured() {
+    self.notify(.didFailToSignIn)
+  }
+
+  // MARK: - IBActions
+
+  @IBAction func loginButtonDidPressed(_ sender: LoginButton) {
+
+  }
+}
+
+// MARK: - Actionable
+extension SignInViewController: Actionable {
+  enum Action {
+    case didSignIn
+    case didFailToSignIn
   }
 }

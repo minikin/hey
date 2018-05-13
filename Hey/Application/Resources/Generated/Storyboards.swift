@@ -83,8 +83,6 @@ internal enum StoryboardScene {
     internal static let storyboardName = "SignIn"
 
     internal static let initialScene = InitialSceneType<Hey.SignInViewController>(storyboard: SignIn.self)
-
-    internal static let signInViewController = SceneType<Hey.SignInViewController>(storyboard: SignIn.self, identifier: "SignInViewController")
   }
 }
 
