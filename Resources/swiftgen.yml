@@ -7,15 +7,15 @@ xcassets:
   output: UIImage+Asset.swift
 strings:
   paths: 
-    - App/Resources/Application.strings
+    - Application/Resources/Application.strings
   templateName: structured-swift4
   output: Localized.swift
 storyboards:
   paths:
     - Application/Resources
-    - Explore/Views
-    - Favorite/Views
-    - MyProfile/Views
-    - SignIn/Views
+    - Screens/Explore/Views
+    - Screens/Favorite/Views
+    - Screens/MyProfile/Views
+    - Screens/SignIn/Views
   templateName: swift4
   output: Storyboards.swift

@@ -23,7 +23,7 @@ final class ContentCoordinator: Coordinator {
   }
 
   func start(animated: Bool, completion: VoidClosure?) {
-    let tabBarVC = UITabBarController()
+    //let tabBarVC = UITabBarController()
 
   }
 
