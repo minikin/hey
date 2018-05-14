@@ -22,6 +22,7 @@ final class ItemsDataSource<Item>: NSObject, UICollectionViewDataSource {
     self.cellDescriptor = cellDescriptor
     self.items = items
   }
+  
   // MARK: - UICollectionViewDataSource
 
   func numberOfSections(in collectionView: UICollectionView) -> Int {

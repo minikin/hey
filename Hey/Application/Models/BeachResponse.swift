@@ -9,10 +9,12 @@
 typealias Beaches = [BeachResponse]
 
 struct BeachResponse: Codable {
+  let id: String
   let name: String
   let imagePath: String
 
   enum CodingKeys: String, CodingKey {
+    case id = "_id"
     case name = "name"
     case imagePath = "url"
   }

@@ -12,8 +12,6 @@ class ExploreCell: UICollectionViewCell {
 
   // MARK: - Instance Properties
 
-  
-
   // MARK: - Cell lifeCycle
 
   override func prepareForReuse() {

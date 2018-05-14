@@ -24,7 +24,6 @@ final class ContentCoordinator: Coordinator {
 
   func start(animated: Bool, completion: VoidClosure?) {
     //let tabBarVC = UITabBarController()
-
   }
 
   func cleanup(animated: Bool, completion: VoidClosure?) {

@@ -32,15 +32,41 @@ final class AppCoordinator: Coordinator {
       self.window.makeKeyAndVisible()
 
       // Spin off auth coordinator
-//      let authCoordinator = AuthCoordinator(self.rootController)
-//      authCoordinator.delegate = self
-//      self.childCoordinators = [authCoordinator]
-//      authCoordinator.start(animated: animated, completion: completion)
+      let authCoordinator = AuthCoordinator(self.rootController)
+      authCoordinator.delegate = self
+      self.childCoordinators = [authCoordinator]
+      authCoordinator.start(animated: animated, completion: completion)
     })
   }
 
   func cleanup(animated: Bool, completion: VoidClosure?) {
     completion?()
   }
+}
 
+// MARK: - AuthCoordinatorDelegate
+
+extension AppCoordinator: AuthCoordinatorDelegate {
+  func authCoordinator(_ coordinator: AuthCoordinator, didNotify action: AuthCoordinator.Action) {
+    switch action {
+    case .didSignIn:
+      guard let authCoordinator = childCoordinators.first as? AuthCoordinator else {
+        preconditionFailure("AppCoordinator should have an AuthCoordinator as a child.")
+      }
+      childCoordinators = []
+      authCoordinator.cleanup(animated: true) {
+        let contentCoordinator = ContentCoordinator(self.rootController)
+        self.childCoordinators = [contentCoordinator]
+        contentCoordinator.start(animated: true, completion: nil)
+      }
+    case .didFailToSignIn:
+      // TODO: -  Implemnent fail to signin case
+      return
+    case .authenticated:
+      childCoordinators = []
+      let contentCoordinator = ContentCoordinator(self.rootController)
+      self.childCoordinators = [contentCoordinator]
+      contentCoordinator.start(animated: true, completion: nil)
+    }
+  }
 }

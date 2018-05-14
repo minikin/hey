@@ -1,0 +1,12 @@
+/* 
+  SignIn.strings
+  Hey
+
+  Created by Sasha Prokhorenko on 14.05.18.
+  Copyright © 2018 Sasha Prokhorenko. All rights reserved.
+*/
+
+"SignIn.Button.Title.SignIn" = "Sign In";
+"SignIn.Button.Title.SignUp" = "Sign Up";
+"SignInOrSignUp.Button.Title.SignIn" = "Registered? Sign In!";
+"SignInOrSignUp.Button.Title.SignUp" = "Want to Sign Up?";

@@ -12,6 +12,7 @@ identifier_name:
     - x
     - y
     - z
+    - f
 
 opt_in_rules:
   - array_init
