@@ -7,6 +7,26 @@ import Foundation
 
 // swiftlint:disable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 internal enum L10n {
+  internal enum Explore {
+
+    internal enum Uitabbaritem {
+
+      internal enum Title {
+        /// Explore
+        internal static let explore = L10n.tr("Explore", "UITabBarItem.Title.Explore")
+      }
+    }
+  }
+  internal enum Profile {
+
+    internal enum Uitabbaritem {
+
+      internal enum Title {
+        /// My Profile
+        internal static let myProfile = L10n.tr("Profile", "UITabBarItem.Title.MyProfile")
+      }
+    }
+  }
   internal enum Application {
 
     internal enum Title {
@@ -56,6 +76,16 @@ internal enum L10n {
           /// Want to Sign Up?
           internal static let signUp = L10n.tr("SignIn", "SignInOrSignUp.Button.Title.SignUp")
         }
+      }
+    }
+  }
+  internal enum Favorite {
+
+    internal enum Uitabbaritem {
+
+      internal enum Title {
+        /// Favorite
+        internal static let favorite = L10n.tr("Favorite", "UITabBarItem.Title.Favorite")
       }
     }
   }

@@ -44,15 +44,58 @@ internal struct ColorAsset {
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
+  internal enum Application {
 
-  // swiftlint:disable trailing_comma
-  internal static let allColors: [ColorAsset] = [
-  ]
-  internal static let allImages: [ImageAsset] = [
-  ]
-  // swiftlint:enable trailing_comma
-  @available(*, deprecated, renamed: "allImages")
-  internal static let allValues: [AssetType] = allImages
+    // swiftlint:disable trailing_comma
+    internal static let allColors: [ColorAsset] = [
+    ]
+    internal static let allImages: [ImageAsset] = [
+    ]
+    // swiftlint:enable trailing_comma
+    @available(*, deprecated, renamed: "allImages")
+    internal static let allValues: [AssetType] = allImages
+  }
+  internal enum Explore {
+    internal static let explore = ImageAsset(name: "explore")
+
+    // swiftlint:disable trailing_comma
+    internal static let allColors: [ColorAsset] = [
+    ]
+    internal static let allImages: [ImageAsset] = [
+      explore,
+    ]
+    // swiftlint:enable trailing_comma
+    @available(*, deprecated, renamed: "allImages")
+    internal static let allValues: [AssetType] = allImages
+  }
+  internal enum Favorite {
+    internal static let favorite = ImageAsset(name: "favorite")
+
+    // swiftlint:disable trailing_comma
+    internal static let allColors: [ColorAsset] = [
+    ]
+    internal static let allImages: [ImageAsset] = [
+      favorite,
+    ]
+    // swiftlint:enable trailing_comma
+    @available(*, deprecated, renamed: "allImages")
+    internal static let allValues: [AssetType] = allImages
+  }
+  internal enum Profile {
+    internal static let avatar = ImageAsset(name: "avatar")
+    internal static let profile = ImageAsset(name: "profile")
+
+    // swiftlint:disable trailing_comma
+    internal static let allColors: [ColorAsset] = [
+    ]
+    internal static let allImages: [ImageAsset] = [
+      avatar,
+      profile,
+    ]
+    // swiftlint:enable trailing_comma
+    @available(*, deprecated, renamed: "allImages")
+    internal static let allValues: [AssetType] = allImages
+  }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

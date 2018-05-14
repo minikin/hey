@@ -33,6 +33,13 @@ final class SignInViewController: UIViewController {
   // MARK: - IBActions
 
   @IBAction func loginButtonDidPressed(_ sender: UIButton) {
+    if signInIsEnable {
+      print("Signin")
+      signInSuccessed()
+    } else {
+      signUFailed()
+      print("signUp")
+    }
   }
 
   @IBAction func toggleSignInOrSignUpDidPressed(_ sender: UIButton) {
@@ -64,10 +71,9 @@ final class SignInViewController: UIViewController {
     self.notify(.didSingUp)
   }
 
-  private func signUFailedd() {
+  private func signUFailed() {
     self.notify(.didFailSingUp)
   }
-
 }
 
 // MARK: - Actionable

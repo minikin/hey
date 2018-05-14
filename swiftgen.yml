@@ -3,12 +3,18 @@ output_dir: Hey/Application/Resources/Generated
 xcassets:
   paths:
     - Application/Resources/Application.xcassets
+    - Screens/Explore/Resources/Explore.xcassets
+    - Screens/Favorite/Resources/Favorite.xcassets
+    - Screens/MyProfile/Resources/Profile.xcassets
   templateName: swift4
   output: UIImage+Asset.swift
 strings:
   paths: 
     - Application/Resources/Application.strings
     - Screens/SignIn/Resources/SignIn.strings
+    - Screens/Explore/Resources/Explore.strings
+    - Screens/Favorite/Resources/Favorite.strings
+    - Screens/MyProfile/Resources/Profile.strings
   templateName: structured-swift4
   output: Localized.swift
 storyboards:

@@ -25,6 +25,12 @@
 		FCA7CA5620AA2D2F00A45AE6 /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7CA5520AA2D2F00A45AE6 /* SignInCoordinator.swift */; };
 		FCA7CA5820AA306300A45AE6 /* Bool+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7CA5720AA306300A45AE6 /* Bool+Extension.swift */; };
 		FCA7CA5B20AA33D100A45AE6 /* SignIn.strings in Resources */ = {isa = PBXBuildFile; fileRef = FCA7CA5A20AA33D100A45AE6 /* SignIn.strings */; };
+		FCA7CA5D20AA39CC00A45AE6 /* Explore.strings in Resources */ = {isa = PBXBuildFile; fileRef = FCA7CA5C20AA39CC00A45AE6 /* Explore.strings */; };
+		FCA7CA5F20AA39F900A45AE6 /* Explore.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCA7CA5E20AA39F900A45AE6 /* Explore.xcassets */; };
+		FCA7CA6220AA3B4E00A45AE6 /* Favorite.strings in Resources */ = {isa = PBXBuildFile; fileRef = FCA7CA6120AA3B4E00A45AE6 /* Favorite.strings */; };
+		FCA7CA6420AA3B6D00A45AE6 /* Favorite.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCA7CA6320AA3B6D00A45AE6 /* Favorite.xcassets */; };
+		FCA7CA6720AA3D1C00A45AE6 /* Profile.strings in Resources */ = {isa = PBXBuildFile; fileRef = FCA7CA6620AA3D1C00A45AE6 /* Profile.strings */; };
+		FCA7CA6920AA3D2300A45AE6 /* Profile.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCA7CA6820AA3D2300A45AE6 /* Profile.xcassets */; };
 		FCAE018120A7061B00CCFF21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE018020A7061B00CCFF21 /* AppDelegate.swift */; };
 		FCAE018820A7061C00CCFF21 /* Application.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCAE018720A7061C00CCFF21 /* Application.xcassets */; };
 		FCAE018B20A7061C00CCFF21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCAE018920A7061C00CCFF21 /* LaunchScreen.storyboard */; };
@@ -104,6 +110,12 @@
 		FCA7CA5520AA2D2F00A45AE6 /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
 		FCA7CA5720AA306300A45AE6 /* Bool+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Extension.swift"; sourceTree = "<group>"; };
 		FCA7CA5A20AA33D100A45AE6 /* SignIn.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = SignIn.strings; sourceTree = "<group>"; };
+		FCA7CA5C20AA39CC00A45AE6 /* Explore.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Explore.strings; sourceTree = "<group>"; };
+		FCA7CA5E20AA39F900A45AE6 /* Explore.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Explore.xcassets; sourceTree = "<group>"; };
+		FCA7CA6120AA3B4E00A45AE6 /* Favorite.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Favorite.strings; sourceTree = "<group>"; };
+		FCA7CA6320AA3B6D00A45AE6 /* Favorite.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Favorite.xcassets; sourceTree = "<group>"; };
+		FCA7CA6620AA3D1C00A45AE6 /* Profile.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Profile.strings; sourceTree = "<group>"; };
+		FCA7CA6820AA3D2300A45AE6 /* Profile.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Profile.xcassets; sourceTree = "<group>"; };
 		FCAE017D20A7061B00CCFF21 /* Hey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCAE018020A7061B00CCFF21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCAE018720A7061C00CCFF21 /* Application.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Application.xcassets; sourceTree = "<group>"; };
@@ -234,6 +246,24 @@
 			isa = PBXGroup;
 			children = (
 				FCA7CA5A20AA33D100A45AE6 /* SignIn.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FCA7CA6020AA3B4100A45AE6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FCA7CA6120AA3B4E00A45AE6 /* Favorite.strings */,
+				FCA7CA6320AA3B6D00A45AE6 /* Favorite.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FCA7CA6520AA3D1100A45AE6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FCA7CA6620AA3D1C00A45AE6 /* Profile.strings */,
+				FCA7CA6820AA3D2300A45AE6 /* Profile.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -379,6 +409,7 @@
 		FCAE01B420A70A6B00CCFF21 /* MyProfile */ = {
 			isa = PBXGroup;
 			children = (
+				FCA7CA6520AA3D1100A45AE6 /* Resources */,
 				FCAE01CB20A710B500CCFF21 /* Views */,
 				FCAE01CA20A710B000CCFF21 /* ViewControllers */,
 			);
@@ -399,6 +430,7 @@
 		FCAE01B620A70A7D00CCFF21 /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
+				FCA7CA6020AA3B4100A45AE6 /* Resources */,
 				FCAE01C820A710A600CCFF21 /* ViewControllers */,
 				FCAE01C920A710AA00CCFF21 /* Views */,
 			);
@@ -528,6 +560,8 @@
 		FCAE01E620A7172900CCFF21 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FCA7CA5C20AA39CC00A45AE6 /* Explore.strings */,
+				FCA7CA5E20AA39F900A45AE6 /* Explore.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -644,12 +678,18 @@
 			files = (
 				FCAE018B20A7061C00CCFF21 /* LaunchScreen.storyboard in Resources */,
 				FCAE01D920A7118600CCFF21 /* MyProfile.storyboard in Resources */,
+				FCA7CA6220AA3B4E00A45AE6 /* Favorite.strings in Resources */,
+				FCA7CA6920AA3D2300A45AE6 /* Profile.xcassets in Resources */,
 				FCAE018820A7061C00CCFF21 /* Application.xcassets in Resources */,
 				FCAE01D120A710E700CCFF21 /* Favorite.storyboard in Resources */,
+				FCA7CA6720AA3D1C00A45AE6 /* Profile.strings in Resources */,
+				FCA7CA6420AA3B6D00A45AE6 /* Favorite.xcassets in Resources */,
 				FCAE01BF20A70B6F00CCFF21 /* ExploreBeaches.storyboard in Resources */,
 				FCFC186820A8DB830025EDD3 /* SignIn.storyboard in Resources */,
 				FCA7CA5B20AA33D100A45AE6 /* SignIn.strings in Resources */,
 				FC997A1D20A8A70300514103 /* Application.strings in Resources */,
+				FCA7CA5D20AA39CC00A45AE6 /* Explore.strings in Resources */,
+				FCA7CA5F20AA39F900A45AE6 /* Explore.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

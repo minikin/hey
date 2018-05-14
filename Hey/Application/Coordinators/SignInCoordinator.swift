@@ -47,6 +47,7 @@ extension SignInCoordinator: SignInViewControllerDelegate {
   func signInViewController(_ vc: SignInViewController, didNotify action: SignInViewController.Action) {
     switch action {
     case .didSignIn:
+      print("SignInCoordinator didSign")
       notify(.didSignIn)
     default:
       print(action)

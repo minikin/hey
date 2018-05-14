@@ -17,7 +17,71 @@
                     <view key="view" contentMode="scaleToFill" id="NXU-aZ-gyB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="2vs-K3-Y3h">
+                                <rect key="frame" x="123" y="62" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="XqZ-vo-z1N"/>
+                                    <constraint firstAttribute="height" constant="128" id="zPp-tK-jKg"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="e55-oj-ILh">
+                                <rect key="frame" x="30" y="226" width="315" height="66"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3MU-lt-Yw1">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="28"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="id" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJJ-f9-xtz">
+                                        <rect key="frame" x="0.0" y="28" width="315" height="38"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pah-Er-gGH">
+                                <rect key="frame" x="30" y="314" width="315" height="66"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8L-J4-KuK">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="28"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGT-4F-Y3H">
+                                        <rect key="frame" x="0.0" y="28" width="315" height="38"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gk-iM-nC7">
+                                <rect key="frame" x="141.5" y="575" width="92" height="50"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="32"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9gk-iM-nC7" firstAttribute="centerX" secondItem="NXU-aZ-gyB" secondAttribute="centerX" id="4ZK-mX-iId"/>
+                            <constraint firstItem="6Y3-f2-Vhp" firstAttribute="trailing" secondItem="e55-oj-ILh" secondAttribute="trailing" constant="30" id="8e3-Jg-WhF"/>
+                            <constraint firstItem="pah-Er-gGH" firstAttribute="leading" secondItem="6Y3-f2-Vhp" secondAttribute="leading" constant="30" id="9r6-B5-IMQ"/>
+                            <constraint firstItem="pah-Er-gGH" firstAttribute="top" secondItem="e55-oj-ILh" secondAttribute="bottom" constant="22" id="Ak4-Ka-lHe"/>
+                            <constraint firstItem="e55-oj-ILh" firstAttribute="leading" secondItem="6Y3-f2-Vhp" secondAttribute="leading" constant="30" id="GeM-Wf-GFz"/>
+                            <constraint firstItem="pah-Er-gGH" firstAttribute="centerX" secondItem="NXU-aZ-gyB" secondAttribute="centerX" id="JcY-pF-hxy"/>
+                            <constraint firstItem="e55-oj-ILh" firstAttribute="centerX" secondItem="NXU-aZ-gyB" secondAttribute="centerX" id="NOT-JW-73a"/>
+                            <constraint firstItem="2vs-K3-Y3h" firstAttribute="top" secondItem="6Y3-f2-Vhp" secondAttribute="top" constant="42" id="hYD-2h-1TU"/>
+                            <constraint firstItem="e55-oj-ILh" firstAttribute="top" secondItem="2vs-K3-Y3h" secondAttribute="bottom" constant="36" id="lkk-44-Sg4"/>
+                            <constraint firstItem="2vs-K3-Y3h" firstAttribute="centerX" secondItem="NXU-aZ-gyB" secondAttribute="centerX" id="pVU-Dz-ZkS"/>
+                            <constraint firstItem="6Y3-f2-Vhp" firstAttribute="trailing" secondItem="pah-Er-gGH" secondAttribute="trailing" constant="30" id="rC4-UL-CkJ"/>
+                            <constraint firstItem="6Y3-f2-Vhp" firstAttribute="bottom" secondItem="9gk-iM-nC7" secondAttribute="bottom" constant="42" id="x5H-iJ-SHX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Y3-f2-Vhp"/>
                     </view>
                 </viewController>
@@ -26,4 +90,7 @@
             <point key="canvasLocation" x="623" y="-143"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="avatar" width="128" height="128"/>
+    </resources>
 </document>
