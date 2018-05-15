@@ -28,7 +28,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExploreBeachesCell" id="qsU-uj-bz4" customClass="ExploreCell" customModule="Hey" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BeachCell" id="qsU-uj-bz4" customClass="BeachCell" customModule="Hey" customModuleProvider="target">
                                         <rect key="frame" x="4" y="0.0" width="367" height="165"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -38,20 +38,19 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Q7Y-GZ-ukM">
                                                     <rect key="frame" x="0.0" y="0.0" width="367" height="191"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iMO-vR-4Un">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iMO-vR-4Un">
                                                             <rect key="frame" x="0.0" y="0.0" width="367" height="28.5"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YGu-I8-cUe">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YGu-I8-cUe">
                                                             <rect key="frame" x="0.0" y="30.5" width="367" height="134.5"/>
                                                         </imageView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="1" green="0.65544757850000002" blue="0.15817786119999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="Q7Y-GZ-ukM" secondAttribute="bottom" id="Q5e-7V-WrC"/>
                                             <constraint firstItem="Q7Y-GZ-ukM" firstAttribute="top" secondItem="qsU-uj-bz4" secondAttribute="top" id="a5m-LT-trW"/>
@@ -59,23 +58,33 @@
                                             <constraint firstItem="Q7Y-GZ-ukM" firstAttribute="leading" secondItem="qsU-uj-bz4" secondAttribute="leading" id="oTS-x7-c5y"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="beachNameLabel" destination="iMO-vR-4Un" id="dgV-Qu-y78"/>
-                                            <outlet property="beachPhoto" destination="YGu-I8-cUe" id="wEI-MG-jUb"/>
+                                            <outlet property="beachNameLabel" destination="iMO-vR-4Un" id="6OC-FG-wPj"/>
+                                            <outlet property="beachPhoto" destination="YGu-I8-cUe" id="uSz-pP-Qin"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="r6h-aN-mwE">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fwU-sf-VZj" firstAttribute="top" secondItem="bxv-4n-LLW" secondAttribute="top" id="81g-yU-79U"/>
                             <constraint firstItem="fwU-sf-VZj" firstAttribute="bottom" secondItem="bxv-4n-LLW" secondAttribute="bottom" id="Aer-cJ-hhh"/>
                             <constraint firstItem="fwU-sf-VZj" firstAttribute="leading" secondItem="bxv-4n-LLW" secondAttribute="leading" id="BvK-r1-7tS"/>
+                            <constraint firstItem="r6h-aN-mwE" firstAttribute="centerY" secondItem="3P1-ch-QZt" secondAttribute="centerY" id="DNO-VN-xcK"/>
                             <constraint firstItem="fwU-sf-VZj" firstAttribute="trailing" secondItem="bxv-4n-LLW" secondAttribute="trailing" id="OWl-dH-Yfy"/>
+                            <constraint firstItem="r6h-aN-mwE" firstAttribute="centerX" secondItem="3P1-ch-QZt" secondAttribute="centerX" id="vZh-Xz-pcU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bxv-4n-LLW"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="r6h-aN-mwE" id="UXB-gJ-VNd"/>
+                        <outlet property="beachesCollectionView" destination="fwU-sf-VZj" id="Fna-lc-nVb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abL-v6-k9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

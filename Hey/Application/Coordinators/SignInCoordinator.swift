@@ -12,12 +12,14 @@ import Services
 final class SignInCoordinator: Coordinator {
 
   // MARK: - Instance Properties
+
   let baseController: UIViewController
   var childCoordinators: [Coordinator] = []
   weak var delegate: Delegate?
   private var singInViewController: SignInViewController?
 
   // MARK: - Initialization
+  
   init(_ baseController: UIViewController) {
     self.baseController = baseController
   }
@@ -47,7 +49,6 @@ extension SignInCoordinator: SignInViewControllerDelegate {
   func signInViewController(_ vc: SignInViewController, didNotify action: SignInViewController.Action) {
     switch action {
     case .didSignIn:
-      print("SignInCoordinator didSign")
       notify(.didSignIn)
     default:
       print(action)

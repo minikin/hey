@@ -1,21 +1,24 @@
 //
-//  BeachResponse.swift
+//  Beachswift
 //  Hey
 //
 //  Created by Sasha Prokhorenko on 13.05.18.
 //  Copyright © 2018 Sasha Prokhorenko. All rights reserved.
 //
 
-typealias Beaches = [BeachResponse]
+public struct Beach: Codable {
 
-struct BeachResponse: Codable {
+  // MARK: - Properties
+  
   let id: String
-  let name: String
-  let imagePath: String
+  public let name: String
+  public let imagePath: String
+  public let imageHeight: String
 
   enum CodingKeys: String, CodingKey {
     case id = "_id"
     case name = "name"
     case imagePath = "url"
+    case imageHeight = "height"
   }
 }

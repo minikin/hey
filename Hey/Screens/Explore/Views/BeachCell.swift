@@ -1,5 +1,5 @@
 //
-//  ExploreCell.swift
+//  BeachCell.swift
 //  Hey
 //
 //  Created by Sasha Prokhorenko on 13.05.18.
@@ -8,14 +8,17 @@
 
 import UIKit
 
-class ExploreCell: UICollectionViewCell {
+final class BeachCell: UICollectionViewCell {
 
   // MARK: - Instance Properties
+
+  @IBOutlet var beachNameLabel: UILabel!
+  @IBOutlet var beachPhoto: UIImageView!
 
   // MARK: - Cell lifeCycle
 
   override func prepareForReuse() {
     super.prepareForReuse()
-    //beachPhoto.image = nil
+    beachPhoto.image = nil
   }
 }

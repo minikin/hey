@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol PinterestLayoutDelegate: class {
+protocol PinterestLayoutDelegate: AnyObject {
   // Ask the delegate for the height of the image
   func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat
 }

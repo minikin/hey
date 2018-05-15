@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Generic UICollectionViewDataSource can be reused across the app.
 final class ItemsDataSource<Item>: NSObject, UICollectionViewDataSource {
 
   // MARK: - Properties

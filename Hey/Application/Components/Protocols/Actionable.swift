@@ -6,6 +6,8 @@
 //  Copyright © 2018 Sasha Prokhorenko. All rights reserved.
 //
 
+/// The actionable protocol works in conjunction with __Sourcery__ __actionable.swifttemplate__ with
+/// the purpose to simplify a way of creation of delegate pattern.
 protocol Actionable: class {
   associatedtype ActionType
   associatedtype Delegate

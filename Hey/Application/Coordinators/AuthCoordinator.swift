@@ -77,4 +77,3 @@ extension AuthCoordinator: SignInCoordinatorDelegate {
     }
   }
 }
-

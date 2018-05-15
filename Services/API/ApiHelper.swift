@@ -6,11 +6,9 @@
 //  Copyright © 2018 Sasha Prokhorenko. All rights reserved.
 //
 
-import Foundation
-
 infix operator -=>
 
-public
+/// Function wich is always return complition ApiResult<T> on the main thread.
 func -=> <T>(result: ApiResult<T>, complition: @escaping ApiComplitionBlock<T>) {
   DispatchQueue.main.async {
     complition(result)

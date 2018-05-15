@@ -13,6 +13,7 @@ identifier_name:
     - y
     - z
     - f
+    - e
 
 opt_in_rules:
   - array_init

@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		DD04F1F8F1AAC1FD8805AFB8 /* libPods-Hey.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40393B20C8418EE43943995D /* libPods-Hey.a */; };
+		FC1900F020AB45FB001EFD06 /* BeachesApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1900EF20AB45FB001EFD06 /* BeachesApiClient.swift */; };
+		FC1900F120AB4767001EFD06 /* Beach.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFC185F20A8D8A20025EDD3 /* Beach.swift */; };
+		FC1900F420AB6CCB001EFD06 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1900F320AB6CCB001EFD06 /* User.swift */; };
+		FC1900F620AB6D7F001EFD06 /* BeachCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1900F520AB6D7F001EFD06 /* BeachCellViewModel.swift */; };
+		FC1900F820AB728B001EFD06 /* ExploreBeachesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1900F720AB728B001EFD06 /* ExploreBeachesViewModel.swift */; };
+		FC1900FA20AB7FC6001EFD06 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1900F920AB7FC6001EFD06 /* String+Extension.swift */; };
 		FC608F3620A8EAE1004884E8 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC608F3520A8EAE1004884E8 /* PinterestLayout.swift */; };
-		FC60A04D20A9CB000095B5C5 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60A04C20A9CB000095B5C5 /* HttpMethod.swift */; };
-		FC60A04F20A9CB340095B5C5 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60A04E20A9CB340095B5C5 /* Resource.swift */; };
-		FC60A05120A9CC940095B5C5 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60A05020A9CC940095B5C5 /* URLRequest+Extensions.swift */; };
 		FC60A05420A9CFB40095B5C5 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60A05320A9CFB40095B5C5 /* Environment.swift */; };
-		FC60A05620A9D0560095B5C5 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60A05520A9D0560095B5C5 /* Endpoint.swift */; };
-		FC60A05820A9DA700095B5C5 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60A05720A9DA700095B5C5 /* Webservice.swift */; };
 		FC60A05A20A9ECC00095B5C5 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = FC60A05920A9ECC00095B5C5 /* swiftgen.yml */; };
 		FC8C8D9820A8CA19007D9E59 /* Actionable+AutoConformance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C8D9720A8CA19007D9E59 /* Actionable+AutoConformance.swift */; };
 		FC997A1520A8A17F00514103 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC997A1420A8A17F00514103 /* Coordinator.swift */; };
@@ -54,8 +55,7 @@
 		FCFC185820A8CFA90025EDD3 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFC185520A8CFA90025EDD3 /* Localized.swift */; };
 		FCFC185A20A8D65D0025EDD3 /* ItemsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFC185920A8D65D0025EDD3 /* ItemsDataSource.swift */; };
 		FCFC185C20A8D6D30025EDD3 /* CellDescriptor.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFC185B20A8D6D30025EDD3 /* CellDescriptor.swift.swift */; };
-		FCFC185E20A8D7940025EDD3 /* ExploreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFC185D20A8D7940025EDD3 /* ExploreCell.swift */; };
-		FCFC186020A8D8A20025EDD3 /* BeachResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFC185F20A8D8A20025EDD3 /* BeachResponse.swift */; };
+		FCFC185E20A8D7940025EDD3 /* BeachCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFC185D20A8D7940025EDD3 /* BeachCell.swift */; };
 		FCFC186220A8D9210025EDD3 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFC186120A8D9210025EDD3 /* UIImageView+Extensions.swift */; };
 		FCFC186420A8D9790025EDD3 /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFC186320A8D9790025EDD3 /* ApiHelper.swift */; };
 		FCFC186620A8D9980025EDD3 /* ApiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFC186520A8D9980025EDD3 /* ApiResult.swift */; };
@@ -92,13 +92,13 @@
 		4F62B4445E7D667319BF7DB4 /* Pods-Hey.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hey/Pods-Hey.release.xcconfig"; sourceTree = "<group>"; };
 		8FBAB291069F4DD4365C13B1 /* Pods-Hey.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hey/Pods-Hey.debug.xcconfig"; sourceTree = "<group>"; };
 		D0E426E6FD4EF94EB917FB9F /* Pods_Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC1900EF20AB45FB001EFD06 /* BeachesApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachesApiClient.swift; sourceTree = "<group>"; };
+		FC1900F320AB6CCB001EFD06 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FC1900F520AB6D7F001EFD06 /* BeachCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachCellViewModel.swift; sourceTree = "<group>"; };
+		FC1900F720AB728B001EFD06 /* ExploreBeachesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreBeachesViewModel.swift; sourceTree = "<group>"; };
+		FC1900F920AB7FC6001EFD06 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		FC608F3520A8EAE1004884E8 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
-		FC60A04C20A9CB000095B5C5 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
-		FC60A04E20A9CB340095B5C5 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
-		FC60A05020A9CC940095B5C5 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
 		FC60A05320A9CFB40095B5C5 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
-		FC60A05520A9D0560095B5C5 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		FC60A05720A9DA700095B5C5 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 		FC60A05920A9ECC00095B5C5 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = swiftgen.yml; sourceTree = "<group>"; };
 		FC8C8D9720A8CA19007D9E59 /* Actionable+AutoConformance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Actionable+AutoConformance.swift"; sourceTree = "<group>"; };
 		FC997A1420A8A17F00514103 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -144,8 +144,8 @@
 		FCFC185520A8CFA90025EDD3 /* Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
 		FCFC185920A8D65D0025EDD3 /* ItemsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsDataSource.swift; sourceTree = "<group>"; };
 		FCFC185B20A8D6D30025EDD3 /* CellDescriptor.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDescriptor.swift.swift; sourceTree = "<group>"; };
-		FCFC185D20A8D7940025EDD3 /* ExploreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCell.swift; sourceTree = "<group>"; };
-		FCFC185F20A8D8A20025EDD3 /* BeachResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachResponse.swift; sourceTree = "<group>"; };
+		FCFC185D20A8D7940025EDD3 /* BeachCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachCell.swift; sourceTree = "<group>"; };
+		FCFC185F20A8D8A20025EDD3 /* Beach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beach.swift; sourceTree = "<group>"; };
 		FCFC186120A8D9210025EDD3 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		FCFC186320A8D9790025EDD3 /* ApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
 		FCFC186520A8D9980025EDD3 /* ApiResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResult.swift; sourceTree = "<group>"; };
@@ -191,6 +191,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FC1900F220AB4B91001EFD06 /* Response Models */ = {
+			isa = PBXGroup;
+			children = (
+				FCFC185F20A8D8A20025EDD3 /* Beach.swift */,
+				FC1900F320AB6CCB001EFD06 /* User.swift */,
+			);
+			path = "Response Models";
+			sourceTree = "<group>";
+		};
 		FC60A05220A9CF660095B5C5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +238,8 @@
 			children = (
 				FCFC186320A8D9790025EDD3 /* ApiHelper.swift */,
 				FCFC186520A8D9980025EDD3 /* ApiResult.swift */,
+				FC1900EF20AB45FB001EFD06 /* BeachesApiClient.swift */,
+				FC1900F220AB4B91001EFD06 /* Response Models */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -303,7 +314,6 @@
 		FCAE019820A7064A00CCFF21 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				FCF62BCC20A8E145006E59BA /* Networking */,
 				FC997A1320A8912100514103 /* API */,
 				FCAE01AC20A707EF00CCFF21 /* Utilities */,
 				FCAE019920A7064A00CCFF21 /* Services.h */,
@@ -319,7 +329,6 @@
 				FCAE01AB20A7079800CCFF21 /* Components */,
 				FCAE01A920A7077300CCFF21 /* Coordinators */,
 				FCAE01A820A7075400CCFF21 /* Extensions */,
-				FCAE01A620A7073900CCFF21 /* Models */,
 				FCAE01A520A7066600CCFF21 /* Resources */,
 				FC60A05220A9CF660095B5C5 /* Supporting Files */,
 			);
@@ -338,20 +347,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		FCAE01A620A7073900CCFF21 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				FCFC185F20A8D8A20025EDD3 /* BeachResponse.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		FCAE01A820A7075400CCFF21 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				FCAE01C620A7101200CCFF21 /* UIWindow+Extensions.swift */,
 				FCFC186120A8D9210025EDD3 /* UIImageView+Extensions.swift */,
 				FCA7CA5720AA306300A45AE6 /* Bool+Extension.swift */,
+				FC1900F920AB7FC6001EFD06 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -470,7 +472,7 @@
 			isa = PBXGroup;
 			children = (
 				FCAE01BE20A70B6F00CCFF21 /* ExploreBeaches.storyboard */,
-				FCFC185D20A8D7940025EDD3 /* ExploreCell.swift */,
+				FCFC185D20A8D7940025EDD3 /* BeachCell.swift */,
 				FC608F3520A8EAE1004884E8 /* PinterestLayout.swift */,
 			);
 			path = Views;
@@ -479,6 +481,8 @@
 		FCAE01BD20A70B5200CCFF21 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				FC1900F520AB6D7F001EFD06 /* BeachCellViewModel.swift */,
+				FC1900F720AB728B001EFD06 /* ExploreBeachesViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -564,18 +568,6 @@
 				FCA7CA5E20AA39F900A45AE6 /* Explore.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		FCF62BCC20A8E145006E59BA /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				FC60A05520A9D0560095B5C5 /* Endpoint.swift */,
-				FC60A04C20A9CB000095B5C5 /* HttpMethod.swift */,
-				FC60A04E20A9CB340095B5C5 /* Resource.swift */,
-				FC60A05020A9CC940095B5C5 /* URLRequest+Extensions.swift */,
-				FC60A05720A9DA700095B5C5 /* Webservice.swift */,
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -779,7 +771,6 @@
 				FCAE01D720A7117200CCFF21 /* MyProfileViewController.swift in Sources */,
 				FCAE01C720A7101200CCFF21 /* UIWindow+Extensions.swift in Sources */,
 				FCFC185C20A8D6D30025EDD3 /* CellDescriptor.swift.swift in Sources */,
-				FCFC186020A8D8A20025EDD3 /* BeachResponse.swift in Sources */,
 				FCFC185820A8CFA90025EDD3 /* Localized.swift in Sources */,
 				FC997A1520A8A17F00514103 /* Coordinator.swift in Sources */,
 				FCFC185620A8CFA90025EDD3 /* Storyboards.swift in Sources */,
@@ -790,12 +781,15 @@
 				FCAE01BB20A70B3F00CCFF21 /* ExploreBeachesViewController.swift in Sources */,
 				FCA7CA5820AA306300A45AE6 /* Bool+Extension.swift in Sources */,
 				FCAE01C520A70F4800CCFF21 /* Actionable.swift in Sources */,
+				FC1900F620AB6D7F001EFD06 /* BeachCellViewModel.swift in Sources */,
 				FCFC185720A8CFA90025EDD3 /* UIImage+Asset.swift in Sources */,
 				FCAE01D520A7111E00CCFF21 /* SignInViewController.swift in Sources */,
-				FCFC185E20A8D7940025EDD3 /* ExploreCell.swift in Sources */,
+				FCFC185E20A8D7940025EDD3 /* BeachCell.swift in Sources */,
 				FCAE018120A7061B00CCFF21 /* AppDelegate.swift in Sources */,
 				FCAE01CF20A710D100CCFF21 /* FavoriteViewController.swift in Sources */,
+				FC1900F820AB728B001EFD06 /* ExploreBeachesViewModel.swift in Sources */,
 				FC997A1920A8A29500514103 /* ContentCoordinator.swift in Sources */,
+				FC1900FA20AB7FC6001EFD06 /* String+Extension.swift in Sources */,
 				FCAE01C220A70E4800CCFF21 /* ControlContainable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -804,15 +798,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC60A05120A9CC940095B5C5 /* URLRequest+Extensions.swift in Sources */,
 				FCFC186420A8D9790025EDD3 /* ApiHelper.swift in Sources */,
-				FC60A05620A9D0560095B5C5 /* Endpoint.swift in Sources */,
+				FC1900F020AB45FB001EFD06 /* BeachesApiClient.swift in Sources */,
 				FCAE01E520A7166D00CCFF21 /* Result.swift in Sources */,
-				FC60A04D20A9CB000095B5C5 /* HttpMethod.swift in Sources */,
-				FC60A04F20A9CB340095B5C5 /* Resource.swift in Sources */,
+				FC1900F120AB4767001EFD06 /* Beach.swift in Sources */,
 				FCAE01AE20A7080A00CCFF21 /* Closures.swift in Sources */,
 				FCFC186620A8D9980025EDD3 /* ApiResult.swift in Sources */,
-				FC60A05820A9DA700095B5C5 /* Webservice.swift in Sources */,
+				FC1900F420AB6CCB001EFD06 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

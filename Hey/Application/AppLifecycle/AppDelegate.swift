@@ -7,22 +7,16 @@
 //
 
 import UIKit
-import Services
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+final class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
   private var coordinator: AppCoordinator!
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions _: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     startAppCoordinator()
-
-//    let url = URL(string: "http://techtest.lab1886.io:3000/beaches?page=1")!
-//    let data = Resource<Beaches>(url: url)
-//    Webservice().load(resource: data) {
-//      print($0)
-//    }
+    
     return true
   }
 

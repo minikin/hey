@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Generic UICollectionViewCell helper class.
 struct CellDescriptor {
 
   // MARK: - Properties
