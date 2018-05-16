@@ -24,6 +24,7 @@ final class ExploreBeachesViewController: UIViewController {
       beachesCollectionView.dataSource = beachesDataSource
       let layout = PinterestLayout()
       layout.delegate = self
+      layout.prepare()
       beachesCollectionView.collectionViewLayout = layout
     }
   }
@@ -31,8 +32,10 @@ final class ExploreBeachesViewController: UIViewController {
   
   // MARK: - Properties
 
-  private let viewModel = ExploreBeachesViewModel()
+  private let viewModel = ExploreBeachesViewModel(ExpoloreBeachesAPI())
   private var currentPage = 1
+  private let numberOfPages = 2
+  private var shouldShowLoadingCell = false
 
   // MARK: - ViewController LifeCycle
 
@@ -43,7 +46,7 @@ final class ExploreBeachesViewController: UIViewController {
 
   // MARK: - Helpers
 
-  private func loadBeaches() {
+  private func loadBeaches(refresh: Bool = false) {
     viewModel.showLoading = {
       if self.viewModel.isLoading {
         self.activityIndicator.startAnimating()
@@ -60,15 +63,23 @@ final class ExploreBeachesViewController: UIViewController {
 
     viewModel.reloadData = {
       self.beachesDataSource.items = self.viewModel.beachCellViewModels
-      self.beachesCollectionView.reloadData()
+      DispatchQueue.main.async {
+        self.beachesCollectionView.reloadData()
+        self.beachesCollectionView.collectionViewLayout.prepare()
+      }
     }
 
-    viewModel.fetchBeaches()
+    viewModel.fetchBeaches(currentPage, refresh: refresh)
   }
 
   private func fetchNextPage() {
     currentPage += 1
-    loadBeaches()
+    print("Fetching page \(currentPage)")
+    viewModel.fetchBeaches(currentPage)
+  }
+
+  private func isLoadingIndexPath(_ indexPath: IndexPath) -> Bool {
+    return indexPath.row == viewModel.beachCellViewModels.count
   }
 }
 
@@ -89,6 +100,8 @@ extension ExploreBeachesViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView,
                       willDisplay cell: UICollectionViewCell,
                       forItemAt indexPath: IndexPath) {
-    
+//    if currentPage < numberOfPages {
+//      fetchNextPage()
+//    }
   }
 }

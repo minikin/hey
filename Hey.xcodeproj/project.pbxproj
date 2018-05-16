@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		DD04F1F8F1AAC1FD8805AFB8 /* libPods-Hey.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40393B20C8418EE43943995D /* libPods-Hey.a */; };
-		FC1900F020AB45FB001EFD06 /* BeachesApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1900EF20AB45FB001EFD06 /* BeachesApiClient.swift */; };
 		FC1900F120AB4767001EFD06 /* Beach.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFC185F20A8D8A20025EDD3 /* Beach.swift */; };
 		FC1900F420AB6CCB001EFD06 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1900F320AB6CCB001EFD06 /* User.swift */; };
 		FC1900F620AB6D7F001EFD06 /* BeachCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1900F520AB6D7F001EFD06 /* BeachCellViewModel.swift */; };
 		FC1900F820AB728B001EFD06 /* ExploreBeachesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1900F720AB728B001EFD06 /* ExploreBeachesViewModel.swift */; };
 		FC1900FA20AB7FC6001EFD06 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1900F920AB7FC6001EFD06 /* String+Extension.swift */; };
+		FC39FA7D20AC45FE00943276 /* ExpoloreBeachesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC39FA7C20AC45FE00943276 /* ExpoloreBeachesAPI.swift */; };
+		FC39FA7F20AC46F900943276 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC39FA7E20AC46F900943276 /* ApiClient.swift */; };
+		FC39FA8220AC502600943276 /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC39FA8120AC502600943276 /* ApiRouter.swift */; };
 		FC608F3620A8EAE1004884E8 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC608F3520A8EAE1004884E8 /* PinterestLayout.swift */; };
 		FC60A05420A9CFB40095B5C5 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60A05320A9CFB40095B5C5 /* Environment.swift */; };
 		FC60A05A20A9ECC00095B5C5 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = FC60A05920A9ECC00095B5C5 /* swiftgen.yml */; };
@@ -49,7 +51,6 @@
 		FCAE01D520A7111E00CCFF21 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE01D420A7111E00CCFF21 /* SignInViewController.swift */; };
 		FCAE01D720A7117200CCFF21 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE01D620A7117200CCFF21 /* MyProfileViewController.swift */; };
 		FCAE01D920A7118600CCFF21 /* MyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCAE01D820A7118600CCFF21 /* MyProfile.storyboard */; };
-		FCAE01E520A7166D00CCFF21 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE01E420A7166D00CCFF21 /* Result.swift */; };
 		FCFC185620A8CFA90025EDD3 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFC185320A8CFA90025EDD3 /* Storyboards.swift */; };
 		FCFC185720A8CFA90025EDD3 /* UIImage+Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFC185420A8CFA90025EDD3 /* UIImage+Asset.swift */; };
 		FCFC185820A8CFA90025EDD3 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFC185520A8CFA90025EDD3 /* Localized.swift */; };
@@ -92,11 +93,13 @@
 		4F62B4445E7D667319BF7DB4 /* Pods-Hey.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hey/Pods-Hey.release.xcconfig"; sourceTree = "<group>"; };
 		8FBAB291069F4DD4365C13B1 /* Pods-Hey.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hey/Pods-Hey.debug.xcconfig"; sourceTree = "<group>"; };
 		D0E426E6FD4EF94EB917FB9F /* Pods_Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC1900EF20AB45FB001EFD06 /* BeachesApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachesApiClient.swift; sourceTree = "<group>"; };
 		FC1900F320AB6CCB001EFD06 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FC1900F520AB6D7F001EFD06 /* BeachCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachCellViewModel.swift; sourceTree = "<group>"; };
 		FC1900F720AB728B001EFD06 /* ExploreBeachesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreBeachesViewModel.swift; sourceTree = "<group>"; };
 		FC1900F920AB7FC6001EFD06 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		FC39FA7C20AC45FE00943276 /* ExpoloreBeachesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoloreBeachesAPI.swift; sourceTree = "<group>"; };
+		FC39FA7E20AC46F900943276 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		FC39FA8120AC502600943276 /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
 		FC608F3520A8EAE1004884E8 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		FC60A05320A9CFB40095B5C5 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		FC60A05920A9ECC00095B5C5 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = swiftgen.yml; sourceTree = "<group>"; };
@@ -138,7 +141,6 @@
 		FCAE01DB20A7128700CCFF21 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		FCAE01DC20A712AE00CCFF21 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FCAE01E220A7158000CCFF21 /* swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = swiftlint.yml; sourceTree = "<group>"; };
-		FCAE01E420A7166D00CCFF21 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		FCFC185320A8CFA90025EDD3 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		FCFC185420A8CFA90025EDD3 /* UIImage+Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Asset.swift"; sourceTree = "<group>"; };
 		FCFC185520A8CFA90025EDD3 /* Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
@@ -200,6 +202,14 @@
 			path = "Response Models";
 			sourceTree = "<group>";
 		};
+		FC39FA7B20AC45BA00943276 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FC39FA7C20AC45FE00943276 /* ExpoloreBeachesAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		FC60A05220A9CF660095B5C5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,15 +243,16 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		FC997A1320A8912100514103 /* API */ = {
+		FC997A1320A8912100514103 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				FC39FA7E20AC46F900943276 /* ApiClient.swift */,
 				FCFC186320A8D9790025EDD3 /* ApiHelper.swift */,
 				FCFC186520A8D9980025EDD3 /* ApiResult.swift */,
-				FC1900EF20AB45FB001EFD06 /* BeachesApiClient.swift */,
+				FC39FA8120AC502600943276 /* ApiRouter.swift */,
 				FC1900F220AB4B91001EFD06 /* Response Models */,
 			);
-			path = API;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		FC997A2320A8AA0600514103 /* DataSources */ = {
@@ -314,7 +325,7 @@
 		FCAE019820A7064A00CCFF21 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				FC997A1320A8912100514103 /* API */,
+				FC997A1320A8912100514103 /* Networking */,
 				FCAE01AC20A707EF00CCFF21 /* Utilities */,
 				FCAE019920A7064A00CCFF21 /* Services.h */,
 				FCAE019A20A7064A00CCFF21 /* Info.plist */,
@@ -384,7 +395,6 @@
 			isa = PBXGroup;
 			children = (
 				FCAE01AD20A7080A00CCFF21 /* Closures.swift */,
-				FCAE01E420A7166D00CCFF21 /* Result.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -421,6 +431,7 @@
 		FCAE01B520A70A7300CCFF21 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
+				FC39FA7B20AC45BA00943276 /* API */,
 				FCAE01E620A7172900CCFF21 /* Resources */,
 				FCAE01BD20A70B5200CCFF21 /* ViewModels */,
 				FCAE01BC20A70B4C00CCFF21 /* Views */,
@@ -773,6 +784,7 @@
 				FCFC185C20A8D6D30025EDD3 /* CellDescriptor.swift.swift in Sources */,
 				FCFC185820A8CFA90025EDD3 /* Localized.swift in Sources */,
 				FC997A1520A8A17F00514103 /* Coordinator.swift in Sources */,
+				FC39FA7D20AC45FE00943276 /* ExpoloreBeachesAPI.swift in Sources */,
 				FCFC185620A8CFA90025EDD3 /* Storyboards.swift in Sources */,
 				FC8C8D9820A8CA19007D9E59 /* Actionable+AutoConformance.swift in Sources */,
 				FC608F3620A8EAE1004884E8 /* PinterestLayout.swift in Sources */,
@@ -798,13 +810,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC39FA7F20AC46F900943276 /* ApiClient.swift in Sources */,
 				FCFC186420A8D9790025EDD3 /* ApiHelper.swift in Sources */,
-				FC1900F020AB45FB001EFD06 /* BeachesApiClient.swift in Sources */,
-				FCAE01E520A7166D00CCFF21 /* Result.swift in Sources */,
 				FC1900F120AB4767001EFD06 /* Beach.swift in Sources */,
 				FCAE01AE20A7080A00CCFF21 /* Closures.swift in Sources */,
 				FCFC186620A8D9980025EDD3 /* ApiResult.swift in Sources */,
 				FC1900F420AB6CCB001EFD06 /* User.swift in Sources */,
+				FC39FA8220AC502600943276 /* ApiRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

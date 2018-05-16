@@ -31,7 +31,6 @@ extension BeachCellViewModel {
     guard let url = URL(string: imagePath) else {
       return
     }
-    print("BeachCellViewModel", url)
     cell.beachPhoto.setImageWith(url)
     cell.beachNameLabel.text = name
   }

@@ -13,7 +13,7 @@ final class ExploreBeachesViewModel {
 
   // MARK: - Properties
 
-  private let beachesClient = BeachesClient(session: URLSession.shared)
+  private let client: ApiClient
   var beachCellViewModels: [BeachCellViewModel] = []
 
   // MARK: - UI
@@ -28,19 +28,31 @@ final class ExploreBeachesViewModel {
   var reloadData: (VoidClosure)?
   var showError: ((Error) -> Void)?
 
+  init(_ client: ApiClient) {
+    self.client = client
+  }
+
   // MARK: - Helpers
 
-  func fetchBeaches() {
-    beachesClient.fetchBeachList { result in
+  func fetchBeaches(_ page: Int = 1, refresh: Bool = false) {
+    if let client = client as? ExpoloreBeachesAPI {
       self.isLoading = true
-      switch result {
-      case .success(let beaches):
-        self.beachCellViewModels = beaches.map { BeachCellViewModel($0) }
-        self.isLoading = false
-        self.reloadData?()
-      case .failure(let error):
-        print("Error: ", error)
-        self.showError?(error)
+      client.fetchBeachList(page) { result in
+        switch result {
+        case .success(let beaches):
+          if refresh {
+            self.beachCellViewModels = beaches.map { BeachCellViewModel($0) }
+          } else {
+            let newBeachCellViewModels = beaches.map { BeachCellViewModel($0) }
+            self.beachCellViewModels.append(contentsOf: newBeachCellViewModels)
+          }
+          print(self.beachCellViewModels.count)
+          self.isLoading = false
+          self.reloadData?()
+        case .failure(let error):
+          print("Error: ", error)
+          self.showError?(error)
+        }
       }
     }
   }
