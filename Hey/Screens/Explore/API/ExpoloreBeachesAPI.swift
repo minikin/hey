@@ -9,9 +9,8 @@
 import Services
 
 class ExpoloreBeachesAPI: ApiClient {
-  func fetchBeachList(_ page: Int = 1, completion: @escaping ApiComplitionBlock<[Beach]>) {
-    let url = URL(string: "http://techtest.lab1886.io:3000/beaches?page=\(page)")!
-    let request = URLRequest(url: url)
-    get(with: request, completion: completion)
+  func fetchBeachList(_ page: Int = 0, completion: @escaping ApiComplitionBlock<[Beach]>) {
+    let request = ApiRouter.readBeaches(page: page).urlRequest
+    getListOfItems(with: request!, completion: completion)
   }
 }

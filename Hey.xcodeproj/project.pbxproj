@@ -16,9 +16,14 @@
 		FC39FA7D20AC45FE00943276 /* ExpoloreBeachesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC39FA7C20AC45FE00943276 /* ExpoloreBeachesAPI.swift */; };
 		FC39FA7F20AC46F900943276 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC39FA7E20AC46F900943276 /* ApiClient.swift */; };
 		FC39FA8220AC502600943276 /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC39FA8120AC502600943276 /* ApiRouter.swift */; };
+		FC39FA8520AC511000943276 /* UserProfileAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC39FA8420AC511000943276 /* UserProfileAPI.swift */; };
 		FC608F3620A8EAE1004884E8 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC608F3520A8EAE1004884E8 /* PinterestLayout.swift */; };
 		FC60A05420A9CFB40095B5C5 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60A05320A9CFB40095B5C5 /* Environment.swift */; };
 		FC60A05A20A9ECC00095B5C5 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = FC60A05920A9ECC00095B5C5 /* swiftgen.yml */; };
+		FC782A4920AC65CF0003348B /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC782A4820AC65CF0003348B /* HTTPMethod.swift */; };
+		FC782A4B20AC6C940003348B /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC782A4A20AC6C940003348B /* ApiError.swift */; };
+		FC782A4E20AC6D7E0003348B /* URLConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC782A4D20AC6D7E0003348B /* URLConvertible.swift */; };
+		FC782A5420ACAC4E0003348B /* URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC782A5320ACAC4E0003348B /* URLRequestConvertible.swift */; };
 		FC8C8D9820A8CA19007D9E59 /* Actionable+AutoConformance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C8D9720A8CA19007D9E59 /* Actionable+AutoConformance.swift */; };
 		FC997A1520A8A17F00514103 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC997A1420A8A17F00514103 /* Coordinator.swift */; };
 		FC997A1720A8A1A800514103 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC997A1620A8A1A800514103 /* AppCoordinator.swift */; };
@@ -100,9 +105,14 @@
 		FC39FA7C20AC45FE00943276 /* ExpoloreBeachesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoloreBeachesAPI.swift; sourceTree = "<group>"; };
 		FC39FA7E20AC46F900943276 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		FC39FA8120AC502600943276 /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
+		FC39FA8420AC511000943276 /* UserProfileAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileAPI.swift; sourceTree = "<group>"; };
 		FC608F3520A8EAE1004884E8 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		FC60A05320A9CFB40095B5C5 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		FC60A05920A9ECC00095B5C5 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = swiftgen.yml; sourceTree = "<group>"; };
+		FC782A4820AC65CF0003348B /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		FC782A4A20AC6C940003348B /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		FC782A4D20AC6D7E0003348B /* URLConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConvertible.swift; sourceTree = "<group>"; };
+		FC782A5320ACAC4E0003348B /* URLRequestConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestConvertible.swift; sourceTree = "<group>"; };
 		FC8C8D9720A8CA19007D9E59 /* Actionable+AutoConformance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Actionable+AutoConformance.swift"; sourceTree = "<group>"; };
 		FC997A1420A8A17F00514103 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FC997A1620A8A1A800514103 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -210,12 +220,30 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		FC39FA8320AC50F400943276 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FC39FA8420AC511000943276 /* UserProfileAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		FC60A05220A9CF660095B5C5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				FC60A05320A9CFB40095B5C5 /* Environment.swift */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC782A4C20AC6D6B0003348B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FC782A5320ACAC4E0003348B /* URLRequestConvertible.swift */,
+				FC782A4820AC65CF0003348B /* HTTPMethod.swift */,
+				FC782A4D20AC6D7E0003348B /* URLConvertible.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		FC8C8D9920A8CDF0007D9E59 /* Swiftgen */ = {
@@ -247,9 +275,11 @@
 			isa = PBXGroup;
 			children = (
 				FC39FA7E20AC46F900943276 /* ApiClient.swift */,
+				FC782A4A20AC6C940003348B /* ApiError.swift */,
 				FCFC186320A8D9790025EDD3 /* ApiHelper.swift */,
 				FCFC186520A8D9980025EDD3 /* ApiResult.swift */,
 				FC39FA8120AC502600943276 /* ApiRouter.swift */,
+				FC782A4C20AC6D6B0003348B /* Helpers */,
 				FC1900F220AB4B91001EFD06 /* Response Models */,
 			);
 			path = Networking;
@@ -421,6 +451,7 @@
 		FCAE01B420A70A6B00CCFF21 /* MyProfile */ = {
 			isa = PBXGroup;
 			children = (
+				FC39FA8320AC50F400943276 /* API */,
 				FCA7CA6520AA3D1100A45AE6 /* Resources */,
 				FCAE01CB20A710B500CCFF21 /* Views */,
 				FCAE01CA20A710B000CCFF21 /* ViewControllers */,
@@ -787,6 +818,7 @@
 				FC39FA7D20AC45FE00943276 /* ExpoloreBeachesAPI.swift in Sources */,
 				FCFC185620A8CFA90025EDD3 /* Storyboards.swift in Sources */,
 				FC8C8D9820A8CA19007D9E59 /* Actionable+AutoConformance.swift in Sources */,
+				FC39FA8520AC511000943276 /* UserProfileAPI.swift in Sources */,
 				FC608F3620A8EAE1004884E8 /* PinterestLayout.swift in Sources */,
 				FCFC185A20A8D65D0025EDD3 /* ItemsDataSource.swift in Sources */,
 				FCFC186A20A8DC360025EDD3 /* LoginButton.swift in Sources */,
@@ -814,9 +846,13 @@
 				FCFC186420A8D9790025EDD3 /* ApiHelper.swift in Sources */,
 				FC1900F120AB4767001EFD06 /* Beach.swift in Sources */,
 				FCAE01AE20A7080A00CCFF21 /* Closures.swift in Sources */,
+				FC782A4920AC65CF0003348B /* HTTPMethod.swift in Sources */,
+				FC782A4B20AC6C940003348B /* ApiError.swift in Sources */,
 				FCFC186620A8D9980025EDD3 /* ApiResult.swift in Sources */,
+				FC782A5420ACAC4E0003348B /* URLRequestConvertible.swift in Sources */,
 				FC1900F420AB6CCB001EFD06 /* User.swift in Sources */,
 				FC39FA8220AC502600943276 /* ApiRouter.swift in Sources */,
+				FC782A4E20AC6D7E0003348B /* URLConvertible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

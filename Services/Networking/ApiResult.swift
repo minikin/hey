@@ -13,12 +13,4 @@ public enum ApiResult<T: Codable> {
   case failure(ApiError)
 }
 
-public enum ApiError: Error {
-  case notFound    // 404
-  case serverError(Int) // 5xx
-  case requestError // 4xx
-  case responseFormatInvalid(String)
-  case connectionError(Error)
-}
-
 public typealias ApiComplitionBlock<T: Codable> = (ApiResult<T>) -> Void

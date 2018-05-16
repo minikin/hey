@@ -34,7 +34,7 @@ final class ExploreBeachesViewModel {
 
   // MARK: - Helpers
 
-  func fetchBeaches(_ page: Int = 1, refresh: Bool = false) {
+  func fetchBeaches(_ page: Int = 0, refresh: Bool = false) {
     if let client = client as? ExpoloreBeachesAPI {
       self.isLoading = true
       client.fetchBeachList(page) { result in

@@ -6,7 +6,7 @@
 //  Copyright © 2018 Sasha Prokhorenko. All rights reserved.
 //
 
-public struct User {
+public struct User: Codable {
 
   // MARK: - Properties
   

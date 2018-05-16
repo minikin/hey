@@ -33,7 +33,7 @@ final class ExploreBeachesViewController: UIViewController {
   // MARK: - Properties
 
   private let viewModel = ExploreBeachesViewModel(ExpoloreBeachesAPI())
-  private var currentPage = 1
+  private var currentPage = 0
   private let numberOfPages = 2
   private var shouldShowLoadingCell = false
 
