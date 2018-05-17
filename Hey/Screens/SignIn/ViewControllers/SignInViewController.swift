@@ -22,6 +22,7 @@ final class SignInViewController: UIViewController {
 
   weak var delegate: Delegate?
   private var signInIsEnable = true
+  private let viewModel = AuthViewModel(AuthAPI())
 
   // MARK: - ViewController LifeCycle
 
@@ -33,12 +34,23 @@ final class SignInViewController: UIViewController {
   // MARK: - IBActions
 
   @IBAction func loginButtonDidPressed(_ sender: UIButton) {
+    guard let userEmail = userEmailTextField.text,
+    let userPassword = passwordTextField.text,
+    !userEmail.isEmpty,
+    userPassword.count > 5 else {
+        showAlert()
+        return
+    }
+
+    print(userPassword, userEmail)
+
+    userEmailTextField.resignFirstResponder()
+    passwordTextField.resignFirstResponder()
+
     if signInIsEnable {
-      print("Signin")
-      signInSuccessed()
+      signIn(userEmail, password: userPassword)
     } else {
-      signUFailed()
-      print("signUp")
+      signUp(userEmail, password: userPassword)
     }
   }
 
@@ -48,6 +60,27 @@ final class SignInViewController: UIViewController {
   }
 
   // MARK: - Helpers
+
+  //  test1@gmail.com  - 123456
+  private func signIn(_ email: String, password: String) {
+    viewModel.signIn(email, password: password)
+    viewModel.succseed = { [weak self] in
+      self?.signInSuccessed()
+    }
+    viewModel.failedWithError = { [weak self] _ in
+      self?.signInFailed()
+    }
+  }
+
+  private func signUp(_ email: String, password: String) {
+    viewModel.signUp(email, password: password)
+    viewModel.succseed = { [weak self] in
+      self?.signUpSuccessed()
+    }
+    viewModel.failedWithError = { [weak self] _ in
+      self?.signUpFailed()
+    }
+  }
 
   private func setButtonsTittle() {
     if signInIsEnable {
@@ -63,7 +96,8 @@ final class SignInViewController: UIViewController {
     self.notify(.didSignIn)
   }
 
-  private func loginFailed() {
+  private func signInFailed() {
+    showAlert()
     self.notify(.didFailToSignIn)
   }
 
@@ -71,8 +105,18 @@ final class SignInViewController: UIViewController {
     self.notify(.didSingUp)
   }
 
-  private func signUFailed() {
+  private func signUpFailed() {
+    showAlert()
     self.notify(.didFailSingUp)
+  }
+
+  private func showAlert() {
+    let alertView = UIAlertController(title: L10n.SignIn.Signinviewcontroller.Alert.title,
+                                      message: L10n.SignIn.Signinviewcontroller.Alert.message,
+                                      preferredStyle: .alert)
+    let okAction = UIAlertAction(title: L10n.SignIn.Signinviewcontroller.Alert.Action.title, style: .default)
+    alertView.addAction(okAction)
+    present(alertView, animated: true)
   }
 }
 

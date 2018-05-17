@@ -15,6 +15,8 @@ public struct Beach: Codable {
   public let imagePath: String
   public let imageHeight: String
 
+  // MARK: - CodingKeys
+
   enum CodingKeys: String, CodingKey {
     case id = "_id"
     case name = "name"

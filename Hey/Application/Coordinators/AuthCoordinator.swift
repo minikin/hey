@@ -23,7 +23,7 @@ final class AuthCoordinator: Coordinator {
   weak var delegate: Delegate?
 
   private var userIsAuthenticated: Bool {
-    return false
+    return UserDefaults.logged
   }
 
   private var state: State {

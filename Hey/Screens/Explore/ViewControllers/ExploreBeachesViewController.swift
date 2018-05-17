@@ -47,6 +47,8 @@ final class ExploreBeachesViewController: UIViewController {
   // MARK: - Helpers
 
   private func loadBeaches(refresh: Bool = false) {
+    viewModel.fetchBeaches(currentPage, refresh: refresh)
+
     viewModel.showLoading = {
       if self.viewModel.isLoading {
         self.activityIndicator.startAnimating()
@@ -57,11 +59,7 @@ final class ExploreBeachesViewController: UIViewController {
       }
     }
 
-    viewModel.showError = { error in
-      print(error)
-    }
-
-    viewModel.reloadData = {
+    viewModel.reloadDataOnSuccess = {
       self.beachesDataSource.items = self.viewModel.beachCellViewModels
       DispatchQueue.main.async {
         self.beachesCollectionView.reloadData()
@@ -69,7 +67,9 @@ final class ExploreBeachesViewController: UIViewController {
       }
     }
 
-    viewModel.fetchBeaches(currentPage, refresh: refresh)
+    viewModel.showError = { error in
+      print(error)
+    }
   }
 
   private func fetchNextPage() {

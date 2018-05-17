@@ -13,9 +13,6 @@ Hey is an iOS demo application.
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Running the project](#running-the-project)
-- [Daily Development](#daily-development)
-- [Run Tests](#run-tests)
-- [Deployment](#deployment)
 - [FAQ](#faq)
 
 ## Requirements
@@ -34,12 +31,6 @@ git clone https://github.com/minikin/hey.git && cd hey && make setup
 ## Running the project
 
 From Xcode you can run the app `Hey.xcworkspace`.
-
-## Development
-
-## Run Tests
-
-## Deployment
 
 ## FAQ
 

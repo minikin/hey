@@ -15,6 +15,7 @@ final class ContentCoordinator: Coordinator {
 
   let baseController: UIViewController
   var childCoordinators: [Coordinator] = []
+  weak var delegate: Delegate?
 
   // MARK: - Initialization
 
@@ -37,6 +38,7 @@ final class ContentCoordinator: Coordinator {
                                          tag: 1)
 
     let myProfileVC = StoryboardScene.MyProfile.initialScene.instantiate()
+    myProfileVC.delegate = self
     myProfileVC.tabBarItem = UITabBarItem(title: L10n.Profile.Uitabbaritem.Title.myProfile,
                                           image: Asset.Profile.profile.image,
                                           tag: 2)
@@ -50,5 +52,28 @@ final class ContentCoordinator: Coordinator {
 
   func cleanup(animated: Bool, completion: VoidClosure?) {
     baseController.dismiss(animated: animated, completion: completion)
+  }
+}
+
+// MARK: - Actionable
+
+extension ContentCoordinator: Actionable {
+  enum Action {
+    case didSignOut
+  }
+}
+
+// MARK: - MyProfileViewControllerDelegate
+
+extension ContentCoordinator: MyProfileViewControllerDelegate {
+  func myProfileViewController(_ vc: MyProfileViewController, didNotify action: MyProfileViewController.Action) {
+    switch action {
+    case .didSignOut:
+      childCoordinators = []
+      self.cleanup(animated: true) {
+        let authCoordinator = AuthCoordinator(self.baseController)
+        authCoordinator.start(animated: true, completion: nil)
+      }
+    }
   }
 }

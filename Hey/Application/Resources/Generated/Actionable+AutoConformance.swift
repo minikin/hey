@@ -21,6 +21,38 @@ extension AuthCoordinator {
 
 }
 
+// MARK: - ContentCoordinator
+protocol ContentCoordinatorDelegate: AnyObject {
+    func contentCoordinator(_ coordinator: ContentCoordinator, didNotify action: ContentCoordinator.Action)
+}
+
+extension ContentCoordinator {
+
+    typealias ActionType = Action
+    typealias Delegate = ContentCoordinatorDelegate
+
+    func notify(_ action: ActionType) {
+        delegate?.contentCoordinator(self, didNotify: action)
+    }
+
+}
+
+// MARK: - MyProfileViewController
+protocol MyProfileViewControllerDelegate: AnyObject {
+    func myProfileViewController(_ vc: MyProfileViewController, didNotify action: MyProfileViewController.Action)
+}
+
+extension MyProfileViewController {
+
+    typealias ActionType = Action
+    typealias Delegate = MyProfileViewControllerDelegate
+
+    func notify(_ action: ActionType) {
+        delegate?.myProfileViewController(self, didNotify: action)
+    }
+
+}
+
 // MARK: - SignInCoordinator
 protocol SignInCoordinatorDelegate: AnyObject {
     func signInCoordinator(_ coordinator: SignInCoordinator, didNotify action: SignInCoordinator.Action)

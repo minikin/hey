@@ -6,7 +6,6 @@
 //  Copyright © 2018 Sasha Prokhorenko. All rights reserved.
 //
 
-import UIKit
 import Services
 
 final class ExploreBeachesViewModel {
@@ -15,8 +14,9 @@ final class ExploreBeachesViewModel {
 
   private let client: ApiClient
   var beachCellViewModels: [BeachCellViewModel] = []
-
-  // MARK: - UI
+  var showLoading: (VoidClosure)?
+  var reloadDataOnSuccess: (VoidClosure)?
+  var showError: ((Error) -> Void)?
 
   var isLoading: Bool = false {
     didSet {
@@ -24,9 +24,7 @@ final class ExploreBeachesViewModel {
     }
   }
 
-  var showLoading: (VoidClosure)?
-  var reloadData: (VoidClosure)?
-  var showError: ((Error) -> Void)?
+  // MARK: - Initialisation
 
   init(_ client: ApiClient) {
     self.client = client
@@ -48,7 +46,7 @@ final class ExploreBeachesViewModel {
           }
           print(self.beachCellViewModels.count)
           self.isLoading = false
-          self.reloadData?()
+          self.reloadDataOnSuccess?()
         case .failure(let error):
           print("Error: ", error)
           self.showError?(error)

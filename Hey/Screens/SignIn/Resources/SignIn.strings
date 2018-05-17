@@ -10,3 +10,8 @@
 "SignIn.Button.Title.SignUp" = "Sign Up";
 "SignInOrSignUp.Button.Title.SignIn" = "Registered? Sign In!";
 "SignInOrSignUp.Button.Title.SignUp" = "Want to Sign Up?";
+
+"SignInViewController.Alert.Title" = "Can't SignIn or SignUp!";
+"SignInViewController.Alert.Message" =  "Wrong email or password";
+"SignInViewController.Alert.Action.Title" = "Foiled Again!";
+

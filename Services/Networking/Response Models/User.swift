@@ -10,8 +10,10 @@ public struct User: Codable {
 
   // MARK: - Properties
   
-  let id: String
-  let email: String
+  public let id: String
+  public let email: String
+
+  // MARK: - CodingKeys
 
   enum CodingKeys: String, CodingKey {
     case id = "_id"

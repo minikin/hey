@@ -9,9 +9,12 @@
 import Services
 
 class UserProfileAPI: ApiClient {
-  func fetchBeachList(_ page: Int = 1, completion: @escaping ApiComplitionBlock<[User]>) {
-    let url = URL(string: "http://techtest.lab1886.io:3000/user/me")!
-    let request = URLRequest(url: url)
-    getItem(with: request, completion: completion)
+  func logOutUser(_ token: String, completion: @escaping VoidClosure) {
+    let request = ApiRouter.logOutUser(token: token).urlRequest
+  }
+
+  func fetchUserInfo(_ token: String, completion: @escaping ApiComplitionBlock<User>) {
+    let request = ApiRouter.readUser(token: token).urlRequest
+    getItem(with: request!, completion: completion)
   }
 }

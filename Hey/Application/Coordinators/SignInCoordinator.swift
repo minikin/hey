@@ -48,7 +48,8 @@ extension SignInCoordinator: Actionable {
 extension SignInCoordinator: SignInViewControllerDelegate {
   func signInViewController(_ vc: SignInViewController, didNotify action: SignInViewController.Action) {
     switch action {
-    case .didSignIn:
+    // Just for simplicity. In a real app it probably will different scenarios
+    case .didSignIn, .didSingUp:
       notify(.didSignIn)
     default:
       print(action)

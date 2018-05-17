@@ -30,7 +30,6 @@ final class AppCoordinator: Coordinator {
     // Configure window/root view controller
     window.setRootViewController(rootController, animated: false, completion: {
       self.window.makeKeyAndVisible()
-
       // Spin off auth coordinator
       let authCoordinator = AuthCoordinator(self.rootController)
       authCoordinator.delegate = self
@@ -60,12 +59,13 @@ extension AppCoordinator: AuthCoordinatorDelegate {
         contentCoordinator.start(animated: true, completion: nil)
       }
     case .didFailToSignIn:
-      // TODO: -  Implemnent fail to signin case
+      // Not implemnent
       return
     case .authenticated:
       childCoordinators = []
       let contentCoordinator = ContentCoordinator(self.rootController)
       self.childCoordinators = [contentCoordinator]
+      coordinator.delegate = self
       contentCoordinator.start(animated: true, completion: nil)
     }
   }

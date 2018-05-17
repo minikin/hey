@@ -8,68 +8,82 @@
 
 import Foundation
 
-public typealias HTTPHeaders = [String: String]
-public typealias Parameters = [String: Any]
-
 public enum ApiRouter: URLRequestConvertible {
-  case createUser(email: String, password: String)
+  case signUpUser(email: String, password: String)
   case signInUser(email: String, password: String)
-  case readUser(parameters: Parameters)
-  case destroyUser(parameters: Parameters)
+  case readUser(token: String)
+  case logOutUser(token: String)
   case readBeaches(page: Int)
+  case image(imagePath: String)
 
-  static let baseURLString = "http://techtest.lab1886.io:3000/"
+  public static let baseURLString = "http://techtest.lab1886.io:3000/"
 
   var method: HTTPMethod {
     switch self {
-    case .createUser, .signInUser:
+    case .signUpUser, .signInUser:
       return .post
-    case .destroyUser:
+    case .logOutUser:
       return .delete
-    case .readBeaches, .readUser:
+    case .readBeaches, .readUser, .image:
       return .get
     }
   }
 
   var path: String {
     switch self {
-    case .createUser:
+    case .signUpUser:
       return "user/register"
     case .signInUser:
       return "user/login"
     case .readUser:
       return "user/me"
-    case .destroyUser:
+    case .logOutUser:
       return "user/logout"
     case .readBeaches:
       return "beaches"
+    case .image(let imagePath):
+      return "\(imagePath)"
     }
   }
 
   var url: URL? {
-    let url = try? ApiRouter.baseURLString.asURL()
+    let url = URL(string: ApiRouter.baseURLString)!
 
     switch self {
     case .readBeaches(let page):
-      guard var components = URLComponents(url: (url!.appendingPathComponent(path)), resolvingAgainstBaseURL: false) else {
-        break
+      guard var components = URLComponents(url: url.appendingPathComponent(path),
+                                           resolvingAgainstBaseURL: false) else {
+        return nil
       }
       components.queryItems = [URLQueryItem(name: "page", value: page.description)]
       return components.url
     default:
-      break
+      return url.appendingPathComponent(path)
     }
-
-    return url
   }
 
   public func asURLRequest() throws -> URLRequest {
     guard let finalUrl = url else {
-      throw ApiError.invalidRequestURL(url: url)
+      throw ApiError.invalidURL(url: url)
     }
-    var urlRequest = URLRequest(url: finalUrl)
-    urlRequest.httpMethod = method.rawValue
-    print(urlRequest.httpMethod, urlRequest)
-    return urlRequest
+    var request = URLRequest(url: finalUrl)
+    request.httpMethod = method.rawValue
+    request.addValue("no-cache", forHTTPHeaderField: "Cache-Control")
+
+    switch self {
+    case .signInUser(let email, let password), .signUpUser(let email, let password):
+      let bodyParameters = [
+        "email": "\(email)",
+        "password": "\(password)"
+      ]
+      let bodyString = bodyParameters.queryParameters
+      request.httpBody = bodyString.data(using: .utf8, allowLossyConversion: true)
+    case .logOutUser(let token), .readUser(let token):
+      request.addValue(token, forHTTPHeaderField: "x-auth")
+    default:
+      break
+    }
+
+    return request
   }
 }

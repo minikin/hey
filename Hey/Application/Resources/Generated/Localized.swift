@@ -78,6 +78,21 @@ internal enum L10n {
         }
       }
     }
+
+    internal enum Signinviewcontroller {
+
+      internal enum Alert {
+        /// Wrong email or password
+        internal static let message = L10n.tr("SignIn", "SignInViewController.Alert.Message")
+        /// Can't SignIn or SignUp!
+        internal static let title = L10n.tr("SignIn", "SignInViewController.Alert.Title")
+
+        internal enum Action {
+          /// Foiled Again!
+          internal static let title = L10n.tr("SignIn", "SignInViewController.Alert.Action.Title")
+        }
+      }
+    }
   }
   internal enum Favorite {
 

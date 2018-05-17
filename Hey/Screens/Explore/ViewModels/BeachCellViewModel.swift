@@ -20,7 +20,7 @@ struct BeachCellViewModel {
   // MARK: - Initialisation
 
   init(_ beach: Beach) {
-    self.imagePath = Environment.baseUrlPath + beach.imagePath
+    self.imagePath = beach.imagePath
     self.name = beach.name
     self.imageHeight = beach.imageHeight
   }
@@ -28,7 +28,7 @@ struct BeachCellViewModel {
 
 extension BeachCellViewModel {
   func configureBeacCell(_ cell: BeachCell) {
-    guard let url = URL(string: imagePath) else {
+    guard let url = ApiRouter.image(imagePath: imagePath).urlRequest?.url else {
       return
     }
     cell.beachPhoto.setImageWith(url)

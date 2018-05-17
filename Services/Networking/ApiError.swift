@@ -14,6 +14,6 @@ public enum ApiError: Error {
   case requestError // 4xx
   case responseFormatInvalid(String)
   case connectionError(Error)
-  case invalidURL(url: URLConvertible)
-  case invalidRequestURL(url: URL?)
+  case invalidURL(url: URL?)
+  case invalidHeader([AnyHashable: Any])
 }

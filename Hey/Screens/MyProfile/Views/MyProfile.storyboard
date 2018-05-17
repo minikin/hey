@@ -65,6 +65,9 @@
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="logOutDidPressed:" destination="HP3-gc-FYU" eventType="touchUpInside" id="ZaP-rI-P9d"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -84,6 +87,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Y3-f2-Vhp"/>
                     </view>
+                    <connections>
+                        <outlet property="logOutButton" destination="9gk-iM-nC7" id="8BP-gI-dIN"/>
+                        <outlet property="userEmailLabel" destination="RGT-4F-Y3H" id="5HU-R6-hLt"/>
+                        <outlet property="userIdLabel" destination="IJJ-f9-xtz" id="iUb-Hn-z3F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZD-N5-E3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
