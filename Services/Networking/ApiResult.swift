@@ -9,8 +9,8 @@
 import Foundation
 
 public enum ApiResult<T: Codable> {
-  case success(T)
-  case failure(ApiError)
+    case success(T)
+    case failure(ApiError)
 }
 
 public typealias ApiComplitionBlock<T: Codable> = (ApiResult<T>) -> Void

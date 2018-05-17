@@ -6,126 +6,125 @@
 //  Copyright © 2018 Sasha Prokhorenko. All rights reserved.
 //
 
-import UIKit
 import Services
+import UIKit
 
 final class SignInViewController: UIViewController {
 
-  // MARK: - IBOutlets
+    // MARK: - IBOutlets
 
-  @IBOutlet private var userEmailTextField: UITextField!
-  @IBOutlet private var passwordTextField: UITextField!
-  @IBOutlet private var signInButton: UIButton!
-  @IBOutlet private var signInOrSignUpButton: UIButton!
+    @IBOutlet private var userEmailTextField: UITextField!
+    @IBOutlet private var passwordTextField: UITextField!
+    @IBOutlet private var signInButton: UIButton!
+    @IBOutlet private var signInOrSignUpButton: UIButton!
 
-  // MARK: - Properties
+    // MARK: - Properties
 
-  weak var delegate: Delegate?
-  private var signInIsEnable = true
-  private let viewModel = AuthViewModel(AuthAPI())
+    weak var delegate: Delegate?
+    private var signInIsEnable = true
+    private let viewModel = AuthViewModel(AuthAPI())
 
-  // MARK: - ViewController LifeCycle
+    // MARK: - ViewController LifeCycle
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    setButtonsTittle()
-  }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setButtonsTittle()
+    }
 
-  // MARK: - IBActions
+    // MARK: - IBActions
 
-  @IBAction func loginButtonDidPressed(_ sender: UIButton) {
-    guard let userEmail = userEmailTextField.text,
-    let userPassword = passwordTextField.text,
-    !userEmail.isEmpty,
-    userPassword.count > 5 else {
+    @IBAction func loginButtonDidPressed(_: UIButton) {
+        guard let userEmail = userEmailTextField.text,
+            let userPassword = passwordTextField.text,
+            !userEmail.isEmpty,
+            userPassword.count > 5 else {
+            showAlert()
+            return
+        }
+
+        userEmailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+
+        if signInIsEnable {
+            signIn(userEmail, password: userPassword)
+        } else {
+            signUp(userEmail, password: userPassword)
+        }
+    }
+
+    @IBAction func toggleSignInOrSignUpDidPressed(_: UIButton) {
+        signInIsEnable.toggle()
+        setButtonsTittle()
+    }
+
+    // MARK: - Helpers
+
+    //  test1@gmail.com  - 123456
+    private func signIn(_ email: String, password: String) {
+        viewModel.signIn(email, password: password)
+        viewModel.succseed = { [weak self] in
+            self?.signInSuccessed()
+        }
+        viewModel.failedWithError = { [weak self] _ in
+            self?.signInFailed()
+        }
+    }
+
+    private func signUp(_ email: String, password: String) {
+        viewModel.signUp(email, password: password)
+        viewModel.succseed = { [weak self] in
+            self?.signUpSuccessed()
+        }
+        viewModel.failedWithError = { [weak self] _ in
+            self?.signUpFailed()
+        }
+    }
+
+    private func setButtonsTittle() {
+        if signInIsEnable {
+            signInButton.setTitle(L10n.SignIn.Signin.Button.Title.signIn, for: UIControlState())
+            signInOrSignUpButton.setTitle(L10n.SignIn.Signinorsignup.Button.Title.signUp, for: UIControlState())
+        } else {
+            signInButton.setTitle(L10n.SignIn.Signin.Button.Title.signUp, for: UIControlState())
+            signInOrSignUpButton.setTitle(L10n.SignIn.Signinorsignup.Button.Title.signIn, for: UIControlState())
+        }
+    }
+
+    private func signInSuccessed() {
+        notify(.didSignIn)
+    }
+
+    private func signInFailed() {
         showAlert()
-        return
+        notify(.didFailToSignIn)
     }
 
-    print(userPassword, userEmail)
-
-    userEmailTextField.resignFirstResponder()
-    passwordTextField.resignFirstResponder()
-
-    if signInIsEnable {
-      signIn(userEmail, password: userPassword)
-    } else {
-      signUp(userEmail, password: userPassword)
+    private func signUpSuccessed() {
+        notify(.didSingUp)
     }
-  }
 
-  @IBAction func toggleSignInOrSignUpDidPressed(_ sender: UIButton) {
-    signInIsEnable.toggle()
-    setButtonsTittle()
-  }
-
-  // MARK: - Helpers
-
-  //  test1@gmail.com  - 123456
-  private func signIn(_ email: String, password: String) {
-    viewModel.signIn(email, password: password)
-    viewModel.succseed = { [weak self] in
-      self?.signInSuccessed()
+    private func signUpFailed() {
+        showAlert()
+        notify(.didFailSingUp)
     }
-    viewModel.failedWithError = { [weak self] _ in
-      self?.signInFailed()
+
+    private func showAlert() {
+        let alertView = UIAlertController(title: L10n.SignIn.Signinviewcontroller.Alert.title,
+                                          message: L10n.SignIn.Signinviewcontroller.Alert.message,
+                                          preferredStyle: .alert)
+        let okAction = UIAlertAction(title: L10n.SignIn.Signinviewcontroller.Alert.Action.title, style: .default)
+        alertView.addAction(okAction)
+        present(alertView, animated: true)
     }
-  }
-
-  private func signUp(_ email: String, password: String) {
-    viewModel.signUp(email, password: password)
-    viewModel.succseed = { [weak self] in
-      self?.signUpSuccessed()
-    }
-    viewModel.failedWithError = { [weak self] _ in
-      self?.signUpFailed()
-    }
-  }
-
-  private func setButtonsTittle() {
-    if signInIsEnable {
-      signInButton.setTitle(L10n.SignIn.Signin.Button.Title.signIn, for: UIControlState())
-      signInOrSignUpButton.setTitle(L10n.SignIn.Signinorsignup.Button.Title.signUp, for: UIControlState())
-    } else {
-      signInButton.setTitle(L10n.SignIn.Signin.Button.Title.signUp, for: UIControlState())
-      signInOrSignUpButton.setTitle(L10n.SignIn.Signinorsignup.Button.Title.signIn, for: UIControlState())
-    }
-  }
-
-  private func signInSuccessed() {
-    self.notify(.didSignIn)
-  }
-
-  private func signInFailed() {
-    showAlert()
-    self.notify(.didFailToSignIn)
-  }
-
-  private func signUpSuccessed() {
-    self.notify(.didSingUp)
-  }
-
-  private func signUpFailed() {
-    showAlert()
-    self.notify(.didFailSingUp)
-  }
-
-  private func showAlert() {
-    let alertView = UIAlertController(title: L10n.SignIn.Signinviewcontroller.Alert.title,
-                                      message: L10n.SignIn.Signinviewcontroller.Alert.message,
-                                      preferredStyle: .alert)
-    let okAction = UIAlertAction(title: L10n.SignIn.Signinviewcontroller.Alert.Action.title, style: .default)
-    alertView.addAction(okAction)
-    present(alertView, animated: true)
-  }
 }
 
 // MARK: - Actionable
+
 extension SignInViewController: Actionable {
-  enum Action {
-    case didSignIn
-    case didFailToSignIn
-    case didSingUp
-    case didFailSingUp
-  }
+    enum Action {
+        case didSignIn
+        case didFailToSignIn
+        case didSingUp
+        case didFailSingUp
+    }
 }

@@ -9,16 +9,16 @@
 import Foundation
 
 extension UserDefaults {
-  private enum Keys: String {
-    case logged
-  }
+    private enum Keys: String {
+        case logged
+    }
 
-  static var logged: Bool {
-    get {
-      return UserDefaults.standard.bool(forKey: Keys.logged.rawValue)
+    static var logged: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: Keys.logged.rawValue)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Keys.logged.rawValue)
+        }
     }
-    set {
-      UserDefaults.standard.set(newValue, forKey: Keys.logged.rawValue)
-    }
-  }
 }

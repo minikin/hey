@@ -6,38 +6,38 @@
 //  Copyright © 2018 Sasha Prokhorenko. All rights reserved.
 //
 
-import UIKit
 import Services
+import UIKit
 
 struct BeachCellViewModel {
 
-  // MARK: - Properties
+    // MARK: - Properties
 
-  let imagePath: String
-  let name: String
-  let imageHeight: String
+    let imagePath: String
+    let name: String
+    let imageHeight: String
 
-  // MARK: - Initialisation
+    // MARK: - Initialisation
 
-  init(_ beach: Beach) {
-    self.imagePath = beach.imagePath
-    self.name = beach.name
-    self.imageHeight = beach.imageHeight
-  }
-}
-
-extension BeachCellViewModel {
-  func configureBeacCell(_ cell: BeachCell) {
-    guard let url = ApiRouter.image(imagePath: imagePath).urlRequest?.url else {
-      return
+    init(_ beach: Beach) {
+        imagePath = beach.imagePath
+        name = beach.name
+        imageHeight = beach.imageHeight
     }
-    cell.beachPhoto.setImageWith(url)
-    cell.beachNameLabel.text = name
-  }
 }
 
 extension BeachCellViewModel {
-  var beachCellDescriptor: CellDescriptor {
-    return CellDescriptor(reuseIdentifier: "BeachCell", configure: self.configureBeacCell)
-  }
+    func configureBeacCell(_ cell: BeachCell) {
+        guard let url = ApiRouter.image(imagePath: imagePath).urlRequest?.url else {
+            return
+        }
+        cell.beachPhoto.setImageWith(url)
+        cell.beachNameLabel.text = name
+    }
+}
+
+extension BeachCellViewModel {
+    var beachCellDescriptor: CellDescriptor {
+        return CellDescriptor(reuseIdentifier: "BeachCell", configure: configureBeacCell)
+    }
 }

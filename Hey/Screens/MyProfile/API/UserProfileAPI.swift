@@ -9,12 +9,12 @@
 import Services
 
 class UserProfileAPI: ApiClient {
-  func logOutUser(_ token: String, completion: @escaping VoidClosure) {
-    let request = ApiRouter.logOutUser(token: token).urlRequest
-  }
+    func logOutUser(_ token: String, completion _: @escaping VoidClosure) {
+        _ = ApiRouter.logOutUser(token: token).urlRequest
+    }
 
-  func fetchUserInfo(_ token: String, completion: @escaping ApiComplitionBlock<User>) {
-    let request = ApiRouter.readUser(token: token).urlRequest
-    getItem(with: request!, completion: completion)
-  }
+    func fetchUserInfo(_ token: String, completion: @escaping ApiComplitionBlock<User>) {
+        let request = ApiRouter.readUser(token: token).urlRequest
+        getItem(with: request!, completion: completion)
+    }
 }

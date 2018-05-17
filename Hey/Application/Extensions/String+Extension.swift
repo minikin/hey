@@ -9,10 +9,10 @@
 import UIKit
 
 extension String {
-  func cgFloat() -> CGFloat? {
-    guard let doubleValue = Double(self) else {
-      return nil
+    func cgFloat() -> CGFloat? {
+        guard let doubleValue = Double(self) else {
+            return nil
+        }
+        return CGFloat(doubleValue)
     }
-    return CGFloat(doubleValue)
-  }
 }

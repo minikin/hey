@@ -11,20 +11,20 @@ import UIKit
 private var imageCache: [URL: UIImage] = [:]
 
 extension UIImageView {
-  func setImageWith(_ url: URL) {
-    if let image = imageCache[url] {
-      return self.image = image
-    }
-
-    let dataTask = URLSession.shared.dataTask(with: url) { (data, _, _) in
-      if let data = data,
-        let image = UIImage(data: data) {
-        DispatchQueue.main.async {
-          imageCache[url] = image
-          self.image = image
+    func setImageWith(_ url: URL) {
+        if let image = imageCache[url] {
+            return self.image = image
         }
-      }
+
+        let dataTask = URLSession.shared.dataTask(with: url) { data, _, _ in
+            if let data = data,
+                let image = UIImage(data: data) {
+                DispatchQueue.main.async {
+                    imageCache[url] = image
+                    self.image = image
+                }
+            }
+        }
+        dataTask.resume()
     }
-    dataTask.resume()
-  }
 }

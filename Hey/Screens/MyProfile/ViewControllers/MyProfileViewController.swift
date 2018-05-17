@@ -10,59 +10,61 @@ import UIKit
 
 class MyProfileViewController: UIViewController {
 
-  // MARK: - IBOutlets
-  
-  @IBOutlet private var userIdLabel: UILabel!
-  @IBOutlet private var userEmailLabel: UILabel!
-  @IBOutlet private var logOutButton: UIButton!
-  
-  // MARK: - Properties
+    // MARK: - IBOutlets
 
-  weak var delegate: Delegate?
-  private let viewModel = UserProfileViewModel(UserProfileAPI())
+    @IBOutlet private var userIdLabel: UILabel!
+    @IBOutlet private var userEmailLabel: UILabel!
+    @IBOutlet private var logOutButton: UIButton!
 
-  // MARK: - ViewController LifeCycle
+    // MARK: - Properties
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    fetchUserData()
-  }
+    weak var delegate: Delegate?
+    private let viewModel = UserProfileViewModel(UserProfileAPI())
 
-  // MARK: - Helpers
+    // MARK: - ViewController LifeCycle
 
-  private func fetchUserData() {
-    viewModel.getUserData()
-
-    viewModel.showLoading = { [weak self] in
-      self?.logOutButton.isEnabled = false
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        fetchUserData()
     }
 
-    viewModel.succseed = { [weak self] in
-      self?.configureViewWithSuccess()
+    // MARK: - Helpers
+
+    private func fetchUserData() {
+        viewModel.getUserData()
+
+        viewModel.showLoading = { [weak self] in
+            self?.logOutButton.isEnabled = false
+        }
+
+        viewModel.succseed = { [weak self] in
+            self?.configureViewWithSuccess()
+        }
+
+        viewModel.failedWithError = { [weak self] error in
+            self?.logOutButton.isEnabled = true
+            print(error)
+        }
     }
 
-    viewModel.failedWithError = { [weak self] error in
-      self?.logOutButton.isEnabled = true
-      print(error)
+    private func configureViewWithSuccess() {
+        logOutButton.isEnabled = true
+        userIdLabel.text = viewModel.userId
+        userEmailLabel.text = viewModel.userEmial
     }
-  }
 
-  private func configureViewWithSuccess() {
-    logOutButton.isEnabled = true
-    userIdLabel.text = viewModel.userId
-    userEmailLabel.text = viewModel.userEmial
-  }
+    // MARK: - IBActions
 
-  // MARK: - IBActions
-
-  @IBAction private func logOutDidPressed(_ sender: UIButton) {
-    viewModel.logOut()
-    self.notify(.didSignOut)
-  }
+    @IBAction private func logOutDidPressed(_: UIButton) {
+        viewModel.logOut()
+        notify(.didSignOut)
+    }
 }
+
 // MARK: - Actionable
+
 extension MyProfileViewController: Actionable {
-  enum Action {
-    case didSignOut
-  }
+    enum Action {
+        case didSignOut
+    }
 }

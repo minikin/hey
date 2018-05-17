@@ -10,15 +10,15 @@ import UIKit
 
 final class BeachCell: UICollectionViewCell {
 
-  // MARK: - Instance Properties
+    // MARK: - Instance Properties
 
-  @IBOutlet var beachNameLabel: UILabel!
-  @IBOutlet var beachPhoto: UIImageView!
+    @IBOutlet var beachNameLabel: UILabel!
+    @IBOutlet var beachPhoto: UIImageView!
 
-  // MARK: - Cell lifeCycle
+    // MARK: - Cell lifeCycle
 
-  override func prepareForReuse() {
-    super.prepareForReuse()
-    beachPhoto.image = nil
-  }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        beachPhoto.image = nil
+    }
 }

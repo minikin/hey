@@ -6,74 +6,74 @@
 //  Copyright © 2018 Sasha Prokhorenko. All rights reserved.
 //
 
-import UIKit
 import Services
+import UIKit
 
 final class ContentCoordinator: Coordinator {
 
-  // MARK: - Instance Properties
+    // MARK: - Instance Properties
 
-  let baseController: UIViewController
-  var childCoordinators: [Coordinator] = []
-  weak var delegate: Delegate?
+    let baseController: UIViewController
+    var childCoordinators: [Coordinator] = []
+    weak var delegate: Delegate?
 
-  // MARK: - Initialization
+    // MARK: - Initialization
 
-  init(_ baseController: UIViewController) {
-    self.baseController = baseController
-  }
+    init(_ baseController: UIViewController) {
+        self.baseController = baseController
+    }
 
-  func start(animated: Bool, completion: VoidClosure?) {
-    let tabBarVC = UITabBarController()
-    tabBarVC.view.tintColor =  .red
+    func start(animated: Bool, completion: VoidClosure?) {
+        let tabBarVC = UITabBarController()
+        tabBarVC.view.tintColor = .red
 
-    let exploreVC = StoryboardScene.ExploreBeaches.initialScene.instantiate()
-    exploreVC.tabBarItem = UITabBarItem(title: L10n.Explore.Uitabbaritem.Title.explore,
-                                        image: Asset.Explore.explore.image,
-                                        tag: 0)
+        let exploreVC = StoryboardScene.ExploreBeaches.initialScene.instantiate()
+        exploreVC.tabBarItem = UITabBarItem(title: L10n.Explore.Uitabbaritem.Title.explore,
+                                            image: Asset.Explore.explore.image,
+                                            tag: 0)
 
-    let favoriteVC = StoryboardScene.Favorite.initialScene.instantiate()
-    favoriteVC.tabBarItem = UITabBarItem(title: L10n.Favorite.Uitabbaritem.Title.favorite,
-                                         image: Asset.Favorite.favorite.image,
-                                         tag: 1)
+        let favoriteVC = StoryboardScene.Favorite.initialScene.instantiate()
+        favoriteVC.tabBarItem = UITabBarItem(title: L10n.Favorite.Uitabbaritem.Title.favorite,
+                                             image: Asset.Favorite.favorite.image,
+                                             tag: 1)
 
-    let myProfileVC = StoryboardScene.MyProfile.initialScene.instantiate()
-    myProfileVC.delegate = self
-    myProfileVC.tabBarItem = UITabBarItem(title: L10n.Profile.Uitabbaritem.Title.myProfile,
-                                          image: Asset.Profile.profile.image,
-                                          tag: 2)
+        let myProfileVC = StoryboardScene.MyProfile.initialScene.instantiate()
+        myProfileVC.delegate = self
+        myProfileVC.tabBarItem = UITabBarItem(title: L10n.Profile.Uitabbaritem.Title.myProfile,
+                                              image: Asset.Profile.profile.image,
+                                              tag: 2)
 
-    tabBarVC.viewControllers = [exploreVC, favoriteVC, myProfileVC]
-    tabBarVC.selectedIndex = 0
+        tabBarVC.viewControllers = [exploreVC, favoriteVC, myProfileVC]
+        tabBarVC.selectedIndex = 0
 
-    tabBarVC.modalTransitionStyle = .crossDissolve
-    baseController.present(tabBarVC, animated: animated, completion: completion)
-  }
+        tabBarVC.modalTransitionStyle = .crossDissolve
+        baseController.present(tabBarVC, animated: animated, completion: completion)
+    }
 
-  func cleanup(animated: Bool, completion: VoidClosure?) {
-    baseController.dismiss(animated: animated, completion: completion)
-  }
+    func cleanup(animated: Bool, completion: VoidClosure?) {
+        baseController.dismiss(animated: animated, completion: completion)
+    }
 }
 
 // MARK: - Actionable
 
 extension ContentCoordinator: Actionable {
-  enum Action {
-    case didSignOut
-  }
+    enum Action {
+        case didSignOut
+    }
 }
 
 // MARK: - MyProfileViewControllerDelegate
 
 extension ContentCoordinator: MyProfileViewControllerDelegate {
-  func myProfileViewController(_ vc: MyProfileViewController, didNotify action: MyProfileViewController.Action) {
-    switch action {
-    case .didSignOut:
-      childCoordinators = []
-      self.cleanup(animated: true) {
-        let authCoordinator = AuthCoordinator(self.baseController)
-        authCoordinator.start(animated: true, completion: nil)
-      }
+    func myProfileViewController(_: MyProfileViewController, didNotify action: MyProfileViewController.Action) {
+        switch action {
+        case .didSignOut:
+            childCoordinators = []
+            cleanup(animated: true) {
+                let authCoordinator = AuthCoordinator(self.baseController)
+                authCoordinator.start(animated: true, completion: nil)
+            }
+        }
     }
-  }
 }

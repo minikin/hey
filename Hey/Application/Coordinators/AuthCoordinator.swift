@@ -10,70 +10,70 @@ import Services
 import UIKit
 
 private enum State {
-  case authenticated
-  case none
+    case authenticated
+    case none
 }
 
 final class AuthCoordinator: Coordinator {
 
-  // MARK: - Instance Properties
+    // MARK: - Instance Properties
 
-  var childCoordinators: [Coordinator] = []
-  let baseController: UIViewController
-  weak var delegate: Delegate?
+    var childCoordinators: [Coordinator] = []
+    let baseController: UIViewController
+    weak var delegate: Delegate?
 
-  private var userIsAuthenticated: Bool {
-    return UserDefaults.logged
-  }
-
-  private var state: State {
-    if userIsAuthenticated {
-      return .authenticated
-    } else {
-      return .none
+    private var userIsAuthenticated: Bool {
+        return UserDefaults.logged
     }
-  }
 
-  // MARK: - Initialization
-
-  init(_ baseController: UIViewController) {
-    self.baseController = baseController
-  }
-
-  func start(animated: Bool, completion: VoidClosure?) {
-    switch state {
-    case .authenticated:
-      notify(.authenticated)
-    case .none:
-      let signInCoordinator = SignInCoordinator(baseController)
-      signInCoordinator.delegate = self
-      signInCoordinator.start(animated: animated, completion: completion)
-      childCoordinators = [signInCoordinator]
+    private var state: State {
+        if userIsAuthenticated {
+            return .authenticated
+        } else {
+            return .none
+        }
     }
-  }
 
-  func cleanup(animated: Bool, completion: VoidClosure?) {
-    childCoordinators.first?.cleanup(animated: animated, completion: completion)
-  }
+    // MARK: - Initialization
+
+    init(_ baseController: UIViewController) {
+        self.baseController = baseController
+    }
+
+    func start(animated: Bool, completion: VoidClosure?) {
+        switch state {
+        case .authenticated:
+            notify(.authenticated)
+        case .none:
+            let signInCoordinator = SignInCoordinator(baseController)
+            signInCoordinator.delegate = self
+            signInCoordinator.start(animated: animated, completion: completion)
+            childCoordinators = [signInCoordinator]
+        }
+    }
+
+    func cleanup(animated: Bool, completion: VoidClosure?) {
+        childCoordinators.first?.cleanup(animated: animated, completion: completion)
+    }
 }
 
 // MARK: - Actionable
 
 extension AuthCoordinator: Actionable {
-  enum Action {
-    case didSignIn
-    case didFailToSignIn
-    case authenticated
-  }
+    enum Action {
+        case didSignIn
+        case didFailToSignIn
+        case authenticated
+    }
 }
 
 // MARK: - SignInCoordinatorDelegate
 
 extension AuthCoordinator: SignInCoordinatorDelegate {
-  func signInCoordinator(_ coordinator: SignInCoordinator, didNotify action: SignInCoordinator.Action) {
-    switch action {
-    case .didSignIn:
-      notify(.didSignIn)
+    func signInCoordinator(_: SignInCoordinator, didNotify action: SignInCoordinator.Action) {
+        switch action {
+        case .didSignIn:
+            notify(.didSignIn)
+        }
     }
-  }
 }

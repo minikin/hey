@@ -7,7 +7,7 @@
 //
 
 extension Bool {
-  mutating func toggle() {
-    self = !self
-  }
+    mutating func toggle() {
+        self = !self
+    }
 }

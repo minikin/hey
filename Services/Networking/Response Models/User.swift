@@ -8,15 +8,15 @@
 
 public struct User: Codable {
 
-  // MARK: - Properties
-  
-  public let id: String
-  public let email: String
+    // MARK: - Properties
 
-  // MARK: - CodingKeys
+    public let id: String
+    public let email: String
 
-  enum CodingKeys: String, CodingKey {
-    case id = "_id"
-    case email = "email"
-  }
+    // MARK: - CodingKeys
+
+    enum CodingKeys: String, CodingKey {
+        case id = "_id"
+        case email
+    }
 }

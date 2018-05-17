@@ -8,19 +8,19 @@
 
 public struct Beach: Codable {
 
-  // MARK: - Properties
-  
-  let id: String
-  public let name: String
-  public let imagePath: String
-  public let imageHeight: String
+    // MARK: - Properties
 
-  // MARK: - CodingKeys
+    let id: String
+    public let name: String
+    public let imagePath: String
+    public let imageHeight: String
 
-  enum CodingKeys: String, CodingKey {
-    case id = "_id"
-    case name = "name"
-    case imagePath = "url"
-    case imageHeight = "height"
-  }
+    // MARK: - CodingKeys
+
+    enum CodingKeys: String, CodingKey {
+        case id = "_id"
+        case name
+        case imagePath = "url"
+        case imageHeight = "height"
+    }
 }

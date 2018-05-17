@@ -10,13 +10,13 @@ import Foundation
 
 public struct Account: Codable {
 
-  // MARK: - Properties
+    // MARK: - Properties
 
-  public let accessToken: String
+    public let accessToken: String
 
-  // MARK: - Initialisation
+    // MARK: - Initialisation
 
-  public init(_ accessToken: String) {
-    self.accessToken = accessToken
-  }
+    public init(_ accessToken: String) {
+        self.accessToken = accessToken
+    }
 }

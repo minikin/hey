@@ -11,34 +11,34 @@ import UIKit
 /// Generic UICollectionViewDataSource can be reused across the app.
 final class ItemsDataSource<Item>: NSObject, UICollectionViewDataSource {
 
-  // MARK: - Properties
+    // MARK: - Properties
 
-  var items: [Item] = []
-  let cellDescriptor: (Item) -> CellDescriptor
-  var reuseIdentifiers: Set<String> = []
+    var items: [Item] = []
+    let cellDescriptor: (Item) -> CellDescriptor
+    var reuseIdentifiers: Set<String> = []
 
-  // MARK: - Initialization
+    // MARK: - Initialization
 
-  init(items: [Item], cellDescriptor: @escaping (Item) -> CellDescriptor) {
-    self.cellDescriptor = cellDescriptor
-    self.items = items
-  }
-  
-  // MARK: - UICollectionViewDataSource
+    init(items: [Item], cellDescriptor: @escaping (Item) -> CellDescriptor) {
+        self.cellDescriptor = cellDescriptor
+        self.items = items
+    }
 
-  func numberOfSections(in collectionView: UICollectionView) -> Int {
-    return 1
-  }
+    // MARK: - UICollectionViewDataSource
 
-  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return items.count
-  }
+    func numberOfSections(in _: UICollectionView) -> Int {
+        return 1
+    }
 
-  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let item = items[indexPath.row]
-    let descriptor = cellDescriptor(item)
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: descriptor.reuseIdentifier, for: indexPath)
-    descriptor.configure(cell)
-    return cell
-  }
+    func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
+        return items.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let item = items[indexPath.row]
+        let descriptor = cellDescriptor(item)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: descriptor.reuseIdentifier, for: indexPath)
+        descriptor.configure(cell)
+        return cell
+    }
 }

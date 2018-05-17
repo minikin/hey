@@ -11,20 +11,20 @@ import UIKit
 /// Generic UICollectionViewCell helper class.
 struct CellDescriptor {
 
-  // MARK: - Properties
+    // MARK: - Properties
 
-  let cellClass: UICollectionViewCell.Type
-  let reuseIdentifier: String
-  let configure: (UICollectionViewCell) -> Void
+    let cellClass: UICollectionViewCell.Type
+    let reuseIdentifier: String
+    let configure: (UICollectionViewCell) -> Void
 
-  // MARK: - Object lifecycle
+    // MARK: - Object lifecycle
 
-  init<Cell: UICollectionViewCell>(reuseIdentifier: String, configure: @escaping (Cell) -> Void) {
-    self.cellClass = Cell.self
-    self.reuseIdentifier = reuseIdentifier
-    self.configure = { cell in
-      //swiftlint:disable:next force_cast
-      configure(cell as! Cell)
+    init<Cell: UICollectionViewCell>(reuseIdentifier: String, configure: @escaping (Cell) -> Void) {
+        cellClass = Cell.self
+        self.reuseIdentifier = reuseIdentifier
+        self.configure = { cell in
+            // swiftlint:disable:next force_cast
+            configure(cell as! Cell)
+        }
     }
-  }
 }
