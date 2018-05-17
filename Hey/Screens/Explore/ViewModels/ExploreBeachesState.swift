@@ -8,12 +8,12 @@
 
 import Services
 
-final class ExploreBeachesViewModel {
+class ExploreBeachesState {
 
     // MARK: - Properties
 
     private let client: ApiClient
-    var beachCellViewModels: [BeachCellViewModel] = []
+    var beachCellState: [BeachCellState] = []
     var showLoading: VoidClosure?
     var reloadDataOnSuccess: VoidClosure?
     var showError: ((Error) -> Void)?
@@ -32,19 +32,19 @@ final class ExploreBeachesViewModel {
 
     // MARK: - Helpers
 
-    func fetchBeaches(_ page: Int = 0, refresh: Bool = false) {
+  func fetchBeaches(_ page: Int = 0, refresh: Bool = false) {
         if let client = client as? ExpoloreBeachesAPI {
             isLoading = true
             client.fetchBeachList(page) { result in
                 switch result {
                 case let .success(beaches):
                     if refresh {
-                        self.beachCellViewModels = beaches.map { BeachCellViewModel($0) }
+                        self.beachCellState = beaches.map { BeachCellState($0) }
                     } else {
-                        let newBeachCellViewModels = beaches.map { BeachCellViewModel($0) }
-                        self.beachCellViewModels.append(contentsOf: newBeachCellViewModels)
+                        let newBeachCellViewModels = beaches.map { BeachCellState($0) }
+                        self.beachCellState.append(contentsOf: newBeachCellViewModels)
                     }
-                    print(self.beachCellViewModels.count)
+                    print(self.beachCellState.count)
                     self.isLoading = false
                     self.reloadDataOnSuccess?()
                 case let .failure(error):

@@ -10,8 +10,8 @@
 		DD04F1F8F1AAC1FD8805AFB8 /* libPods-Hey.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40393B20C8418EE43943995D /* libPods-Hey.a */; };
 		FC1900F120AB4767001EFD06 /* Beach.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFC185F20A8D8A20025EDD3 /* Beach.swift */; };
 		FC1900F420AB6CCB001EFD06 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1900F320AB6CCB001EFD06 /* User.swift */; };
-		FC1900F620AB6D7F001EFD06 /* BeachCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1900F520AB6D7F001EFD06 /* BeachCellViewModel.swift */; };
-		FC1900F820AB728B001EFD06 /* ExploreBeachesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1900F720AB728B001EFD06 /* ExploreBeachesViewModel.swift */; };
+		FC1900F620AB6D7F001EFD06 /* BeachCellState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1900F520AB6D7F001EFD06 /* BeachCellState.swift */; };
+		FC1900F820AB728B001EFD06 /* ExploreBeachesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1900F720AB728B001EFD06 /* ExploreBeachesState.swift */; };
 		FC1900FA20AB7FC6001EFD06 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1900F920AB7FC6001EFD06 /* String+Extension.swift */; };
 		FC39FA7D20AC45FE00943276 /* ExpoloreBeachesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC39FA7C20AC45FE00943276 /* ExpoloreBeachesAPI.swift */; };
 		FC39FA7F20AC46F900943276 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC39FA7E20AC46F900943276 /* ApiClient.swift */; };
@@ -103,8 +103,8 @@
 		8FBAB291069F4DD4365C13B1 /* Pods-Hey.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hey/Pods-Hey.debug.xcconfig"; sourceTree = "<group>"; };
 		D0E426E6FD4EF94EB917FB9F /* Pods_Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1900F320AB6CCB001EFD06 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		FC1900F520AB6D7F001EFD06 /* BeachCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachCellViewModel.swift; sourceTree = "<group>"; };
-		FC1900F720AB728B001EFD06 /* ExploreBeachesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreBeachesViewModel.swift; sourceTree = "<group>"; };
+		FC1900F520AB6D7F001EFD06 /* BeachCellState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachCellState.swift; sourceTree = "<group>"; };
+		FC1900F720AB728B001EFD06 /* ExploreBeachesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreBeachesState.swift; sourceTree = "<group>"; };
 		FC1900F920AB7FC6001EFD06 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		FC39FA7C20AC45FE00943276 /* ExpoloreBeachesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoloreBeachesAPI.swift; sourceTree = "<group>"; };
 		FC39FA7E20AC46F900943276 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
@@ -157,9 +157,8 @@
 		FCAE01D420A7111E00CCFF21 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		FCAE01D620A7117200CCFF21 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		FCAE01D820A7118600CCFF21 /* MyProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyProfile.storyboard; sourceTree = "<group>"; };
-		FCAE01DB20A7128700CCFF21 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
-		FCAE01DC20A712AE00CCFF21 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FCAE01E220A7158000CCFF21 /* swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = swiftlint.yml; sourceTree = "<group>"; };
+		FCE252BB20ADE37B008D9AFC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FCFC185320A8CFA90025EDD3 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		FCFC185420A8CFA90025EDD3 /* UIImage+Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Asset.swift"; sourceTree = "<group>"; };
 		FCFC185520A8CFA90025EDD3 /* Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
@@ -357,7 +356,7 @@
 		FCAE017420A7061B00CCFF21 = {
 			isa = PBXGroup;
 			children = (
-				FCAE01DA20A7126500CCFF21 /* Documentation */,
+				FCE252BB20ADE37B008D9AFC /* README.md */,
 				F4D3A9DBFAB3C2FE7B1379A7 /* Frameworks */,
 				FCAE017F20A7061B00CCFF21 /* Hey */,
 				94083CE356EB56DEAE186480 /* Pods */,
@@ -560,8 +559,8 @@
 		FCAE01BD20A70B5200CCFF21 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				FC1900F520AB6D7F001EFD06 /* BeachCellViewModel.swift */,
-				FC1900F720AB728B001EFD06 /* ExploreBeachesViewModel.swift */,
+				FC1900F520AB6D7F001EFD06 /* BeachCellState.swift */,
+				FC1900F720AB728B001EFD06 /* ExploreBeachesState.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -620,15 +619,6 @@
 				FCFC186720A8DB830025EDD3 /* SignIn.storyboard */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		FCAE01DA20A7126500CCFF21 /* Documentation */ = {
-			isa = PBXGroup;
-			children = (
-				FCAE01DB20A7128700CCFF21 /* CHANGELOG.md */,
-				FCAE01DC20A712AE00CCFF21 /* README.md */,
-			);
-			path = Documentation;
 			sourceTree = "<group>";
 		};
 		FCAE01E620A7172900CCFF21 /* Resources */ = {
@@ -854,13 +844,13 @@
 				FCAE01BB20A70B3F00CCFF21 /* ExploreBeachesViewController.swift in Sources */,
 				FCA7CA5820AA306300A45AE6 /* Bool+Extension.swift in Sources */,
 				FCAE01C520A70F4800CCFF21 /* Actionable.swift in Sources */,
-				FC1900F620AB6D7F001EFD06 /* BeachCellViewModel.swift in Sources */,
+				FC1900F620AB6D7F001EFD06 /* BeachCellState.swift in Sources */,
 				FCFC185720A8CFA90025EDD3 /* UIImage+Asset.swift in Sources */,
 				FCAE01D520A7111E00CCFF21 /* SignInViewController.swift in Sources */,
 				FCFC185E20A8D7940025EDD3 /* BeachCell.swift in Sources */,
 				FCAE018120A7061B00CCFF21 /* AppDelegate.swift in Sources */,
 				FCAE01CF20A710D100CCFF21 /* FavoriteViewController.swift in Sources */,
-				FC1900F820AB728B001EFD06 /* ExploreBeachesViewModel.swift in Sources */,
+				FC1900F820AB728B001EFD06 /* ExploreBeachesState.swift in Sources */,
 				FC997A1920A8A29500514103 /* ContentCoordinator.swift in Sources */,
 				FC1900FA20AB7FC6001EFD06 /* String+Extension.swift in Sources */,
 				FC8781B520ADB96500F15FFB /* UserProfileViewModel.swift in Sources */,

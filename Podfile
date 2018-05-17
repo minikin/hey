@@ -5,7 +5,7 @@ target 'Hey' do
   # Pods for Hey target
 end
 
-# Pods for better and faster development process
+# Pods for better development process
 pod 'SwiftGen'
 pod 'Sourcery'
 pod 'SwiftLint'

@@ -74,7 +74,7 @@ public enum ApiRouter: URLRequestConvertible {
         case let .signInUser(email, password), let .signUpUser(email, password):
             let bodyParameters = [
                 "email": "\(email)",
-                "password": "\(password)",
+                "password": "\(password)"
             ]
             let bodyString = bodyParameters.queryParameters
             request.httpBody = bodyString.data(using: .utf8, allowLossyConversion: true)

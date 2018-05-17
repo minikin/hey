@@ -13,7 +13,7 @@ final class ExploreBeachesViewController: UIViewController {
 
     // MARK: - Injections
 
-    private var beachesDataSource = ItemsDataSource(items: [BeachCellViewModel](),
+    private var beachesDataSource = ItemsDataSource(items: [BeachCellState](),
                                                     cellDescriptor: { $0.beachCellDescriptor })
 
     // MARK: - IBOutlets
@@ -32,7 +32,7 @@ final class ExploreBeachesViewController: UIViewController {
 
     // MARK: - Properties
 
-    private let viewModel = ExploreBeachesViewModel(ExpoloreBeachesAPI())
+    private let viewModel = ExploreBeachesState(ExpoloreBeachesAPI())
     private var currentPage = 0
     private let numberOfPages = 2
     private var shouldShowLoadingCell = false
@@ -60,7 +60,7 @@ final class ExploreBeachesViewController: UIViewController {
         }
 
         viewModel.reloadDataOnSuccess = {
-            self.beachesDataSource.items = self.viewModel.beachCellViewModels
+            self.beachesDataSource.items = self.viewModel.beachCellState
             DispatchQueue.main.async {
                 self.beachesCollectionView.reloadData()
                 self.beachesCollectionView.collectionViewLayout.prepare()
@@ -79,7 +79,7 @@ final class ExploreBeachesViewController: UIViewController {
     }
 
     private func isLoadingIndexPath(_ indexPath: IndexPath) -> Bool {
-        return indexPath.row == viewModel.beachCellViewModels.count
+        return indexPath.row == viewModel.beachCellState.count
     }
 }
 
@@ -87,7 +87,7 @@ final class ExploreBeachesViewController: UIViewController {
 
 extension ExploreBeachesViewController: PinterestLayoutDelegate {
     func collectionView(_: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
-        guard let heightString = viewModel.beachCellViewModels[indexPath.item].imageHeight.cgFloat() else {
+        guard let heightString = viewModel.beachCellState[indexPath.item].imageHeight.cgFloat() else {
             return 100
         }
         return heightString
