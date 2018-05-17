@@ -24,12 +24,12 @@
 		FC782A5420ACAC4E0003348B /* URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC782A5320ACAC4E0003348B /* URLRequestConvertible.swift */; };
 		FC782A5720ACB0B00003348B /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC782A5620ACB0B00003348B /* AuthAPI.swift */; };
 		FC782A5B20ACCCB60003348B /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC782A5A20ACCCB60003348B /* Dictionary+Extensions.swift */; };
-		FC782A5E20ACE6100003348B /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC782A5D20ACE6100003348B /* AuthViewModel.swift */; };
+		FC782A5E20ACE6100003348B /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC782A5D20ACE6100003348B /* AuthState.swift */; };
 		FC782A6020AD4F970003348B /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC782A5F20AD4F970003348B /* Account.swift */; };
 		FC782A6320AD588A0003348B /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC782A6220AD588A0003348B /* Keychain.swift */; };
 		FC782A6520AD58EC0003348B /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC782A6420AD58EC0003348B /* KeychainPasswordItem.swift */; };
 		FC782A6A20AD943F0003348B /* UserDefaults+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC782A6920AD943F0003348B /* UserDefaults+Utility.swift */; };
-		FC8781B520ADB96500F15FFB /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8781B420ADB96500F15FFB /* UserProfileViewModel.swift */; };
+		FC8781B520ADB96500F15FFB /* UserProfileState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8781B420ADB96500F15FFB /* UserProfileState.swift */; };
 		FC8C8D9820A8CA19007D9E59 /* Actionable+AutoConformance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C8D9720A8CA19007D9E59 /* Actionable+AutoConformance.swift */; };
 		FC997A1520A8A17F00514103 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC997A1420A8A17F00514103 /* Coordinator.swift */; };
 		FC997A1720A8A1A800514103 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC997A1620A8A1A800514103 /* AppCoordinator.swift */; };
@@ -117,12 +117,12 @@
 		FC782A5320ACAC4E0003348B /* URLRequestConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestConvertible.swift; sourceTree = "<group>"; };
 		FC782A5620ACB0B00003348B /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
 		FC782A5A20ACCCB60003348B /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
-		FC782A5D20ACE6100003348B /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		FC782A5D20ACE6100003348B /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
 		FC782A5F20AD4F970003348B /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		FC782A6220AD588A0003348B /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		FC782A6420AD58EC0003348B /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
 		FC782A6920AD943F0003348B /* UserDefaults+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Utility.swift"; sourceTree = "<group>"; };
-		FC8781B420ADB96500F15FFB /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
+		FC8781B420ADB96500F15FFB /* UserProfileState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileState.swift; sourceTree = "<group>"; };
 		FC8C8D9720A8CA19007D9E59 /* Actionable+AutoConformance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Actionable+AutoConformance.swift"; sourceTree = "<group>"; };
 		FC997A1420A8A17F00514103 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FC997A1620A8A1A800514103 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -257,7 +257,7 @@
 		FC782A5C20ACE5FA0003348B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				FC782A5D20ACE6100003348B /* AuthViewModel.swift */,
+				FC782A5D20ACE6100003348B /* AuthState.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -274,7 +274,7 @@
 		FC8781B320ADB95400F15FFB /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				FC8781B420ADB96500F15FFB /* UserProfileViewModel.swift */,
+				FC8781B420ADB96500F15FFB /* UserProfileState.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -484,11 +484,11 @@
 		FCAE01B420A70A6B00CCFF21 /* MyProfile */ = {
 			isa = PBXGroup;
 			children = (
-				FC8781B320ADB95400F15FFB /* ViewModels */,
 				FC39FA8320AC50F400943276 /* API */,
 				FCA7CA6520AA3D1100A45AE6 /* Resources */,
-				FCAE01CB20A710B500CCFF21 /* Views */,
 				FCAE01CA20A710B000CCFF21 /* ViewControllers */,
+				FC8781B320ADB95400F15FFB /* ViewModels */,
+				FCAE01CB20A710B500CCFF21 /* Views */,
 			);
 			path = MyProfile;
 			sourceTree = "<group>";
@@ -498,9 +498,9 @@
 			children = (
 				FC39FA7B20AC45BA00943276 /* API */,
 				FCAE01E620A7172900CCFF21 /* Resources */,
+				FCAE01B920A70B2700CCFF21 /* ViewControllers */,
 				FCAE01BD20A70B5200CCFF21 /* ViewModels */,
 				FCAE01BC20A70B4C00CCFF21 /* Views */,
-				FCAE01B920A70B2700CCFF21 /* ViewControllers */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -518,11 +518,11 @@
 		FCAE01B720A70A8F00CCFF21 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				FC782A5C20ACE5FA0003348B /* ViewModels */,
 				FC782A5520ACB0A30003348B /* API */,
 				FCA7CA5920AA33AD00A45AE6 /* Resources */,
-				FCAE01CD20A710BE00CCFF21 /* Views */,
 				FCAE01CC20A710BA00CCFF21 /* ViewControllers */,
+				FC782A5C20ACE5FA0003348B /* ViewModels */,
+				FCAE01CD20A710BE00CCFF21 /* Views */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -823,7 +823,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC782A5E20ACE6100003348B /* AuthViewModel.swift in Sources */,
+				FC782A5E20ACE6100003348B /* AuthState.swift in Sources */,
 				FC997A1720A8A1A800514103 /* AppCoordinator.swift in Sources */,
 				FC782A5720ACB0B00003348B /* AuthAPI.swift in Sources */,
 				FC997A1B20A8A2DF00514103 /* AuthCoordinator.swift in Sources */,
@@ -853,7 +853,7 @@
 				FC1900F820AB728B001EFD06 /* ExploreBeachesState.swift in Sources */,
 				FC997A1920A8A29500514103 /* ContentCoordinator.swift in Sources */,
 				FC1900FA20AB7FC6001EFD06 /* String+Extension.swift in Sources */,
-				FC8781B520ADB96500F15FFB /* UserProfileViewModel.swift in Sources */,
+				FC8781B520ADB96500F15FFB /* UserProfileState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

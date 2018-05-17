@@ -38,6 +38,7 @@ final class PinterestLayout: UICollectionViewLayout {
 
     override func prepare() {
         // Only calculate once
+        cache = [UICollectionViewLayoutAttributes]()
         guard cache.isEmpty == true, let collectionView = collectionView else {
             return
         }

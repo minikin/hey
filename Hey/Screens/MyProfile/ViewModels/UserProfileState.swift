@@ -8,7 +8,7 @@
 
 import Services
 
-final class UserProfileViewModel {
+final class UserProfileState {
 
     // MARK: - Properties
 
@@ -45,7 +45,10 @@ final class UserProfileViewModel {
         guard let userEmail = defaults.value(forKey: UserKey.email) as? String else {
             fatalError("Error can't find value for user email")
         }
-        Keychain.removeToken(userEmail)
+        let keyToRemove = userEmail
+        Keychain.removeToken(keyToRemove)
+        defaults.removeObject(forKey: userEmail)
+        defaults.synchronize()
     }
 
     func getUserData() {

@@ -1,5 +1,5 @@
 //
-//  AuthViewModel.swift
+//  AuthVieState.swift
 //  Hey
 //
 //  Created by Sasha Prokhorenko on 17.05.18.
@@ -8,7 +8,7 @@
 
 import Services
 
-final class AuthViewModel {
+final class AuthState {
 
     // MARK: - Properties
 

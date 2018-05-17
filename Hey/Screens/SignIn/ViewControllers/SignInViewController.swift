@@ -22,7 +22,7 @@ final class SignInViewController: UIViewController {
 
     weak var delegate: Delegate?
     private var signInIsEnable = true
-    private let viewModel = AuthViewModel(AuthAPI())
+    private let authState = AuthState(AuthAPI())
 
     // MARK: - ViewController LifeCycle
 
@@ -61,21 +61,21 @@ final class SignInViewController: UIViewController {
 
     //  test1@gmail.com  - 123456
     private func signIn(_ email: String, password: String) {
-        viewModel.signIn(email, password: password)
-        viewModel.succseed = { [weak self] in
+        authState.signIn(email, password: password)
+        authState.succseed = { [weak self] in
             self?.signInSuccessed()
         }
-        viewModel.failedWithError = { [weak self] _ in
+        authState.failedWithError = { [weak self] _ in
             self?.signInFailed()
         }
     }
 
     private func signUp(_ email: String, password: String) {
-        viewModel.signUp(email, password: password)
-        viewModel.succseed = { [weak self] in
+        authState.signUp(email, password: password)
+        authState.succseed = { [weak self] in
             self?.signUpSuccessed()
         }
-        viewModel.failedWithError = { [weak self] _ in
+        authState.failedWithError = { [weak self] _ in
             self?.signUpFailed()
         }
     }

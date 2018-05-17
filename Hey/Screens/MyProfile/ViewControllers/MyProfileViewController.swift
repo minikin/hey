@@ -19,7 +19,7 @@ class MyProfileViewController: UIViewController {
     // MARK: - Properties
 
     weak var delegate: Delegate?
-    private let viewModel = UserProfileViewModel(UserProfileAPI())
+    private let profileState = UserProfileState(UserProfileAPI())
 
     // MARK: - ViewController LifeCycle
 
@@ -31,17 +31,17 @@ class MyProfileViewController: UIViewController {
     // MARK: - Helpers
 
     private func fetchUserData() {
-        viewModel.getUserData()
+        profileState.getUserData()
 
-        viewModel.showLoading = { [weak self] in
+        profileState.showLoading = { [weak self] in
             self?.logOutButton.isEnabled = false
         }
 
-        viewModel.succseed = { [weak self] in
+        profileState.succseed = { [weak self] in
             self?.configureViewWithSuccess()
         }
 
-        viewModel.failedWithError = { [weak self] error in
+        profileState.failedWithError = { [weak self] error in
             self?.logOutButton.isEnabled = true
             print(error)
         }
@@ -49,14 +49,14 @@ class MyProfileViewController: UIViewController {
 
     private func configureViewWithSuccess() {
         logOutButton.isEnabled = true
-        userIdLabel.text = viewModel.userId
-        userEmailLabel.text = viewModel.userEmial
+        userIdLabel.text = profileState.userId
+        userEmailLabel.text = profileState.userEmial
     }
 
     // MARK: - IBActions
 
     @IBAction private func logOutDidPressed(_: UIButton) {
-        viewModel.logOut()
+        profileState.logOut()
         notify(.didSignOut)
     }
 }
