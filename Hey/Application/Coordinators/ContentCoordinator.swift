@@ -66,6 +66,7 @@ extension ContentCoordinator: Actionable {
 // MARK: - MyProfileViewControllerDelegate
 
 extension ContentCoordinator: MyProfileViewControllerDelegate {
+    // TODO: - Implementation is not finished ⚠️
     func myProfileViewController(_: MyProfileViewController, didNotify action: MyProfileViewController.Action) {
         switch action {
         case .didSignOut:

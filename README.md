@@ -71,3 +71,4 @@ From Xcode you can run the app `Hey.xcworkspace`.
     * Expose identifiers as opaque objects
 
 ## Bugs
+* After logout, if a user tries to sign in (or sign up) again it's not possible to dismiss Auth Coordinator and present ContentCoordinator.

@@ -1,5 +1,5 @@
 //
-//  BeachCellViewModel.swift
+//  BeachCellState.swift
 //  Hey
 //
 //  Created by Sasha Prokhorenko on 15.05.18.

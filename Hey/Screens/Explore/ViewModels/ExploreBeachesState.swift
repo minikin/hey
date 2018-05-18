@@ -1,5 +1,5 @@
 //
-//  ExploreBeachesViewModel.swift
+//  ExploreBeachesState.swift
 //  Hey
 //
 //  Created by Sasha Prokhorenko on 15.05.18.

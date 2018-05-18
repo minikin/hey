@@ -1,5 +1,5 @@
 //
-//  UserProfileViewModel.swift
+//  UserProfileState.swift
 //  Hey
 //
 //  Created by Sasha Prokhorenko on 17.05.18.
