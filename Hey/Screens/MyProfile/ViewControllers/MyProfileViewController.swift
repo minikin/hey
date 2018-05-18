@@ -50,7 +50,7 @@ class MyProfileViewController: UIViewController {
     private func configureViewWithSuccess() {
         logOutButton.isEnabled = true
         userIdLabel.text = profileState.userId
-        userEmailLabel.text = profileState.userEmial
+        userEmailLabel.text = profileState.userEmail
     }
 
     // MARK: - IBActions

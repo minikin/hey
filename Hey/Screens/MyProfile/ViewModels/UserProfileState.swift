@@ -14,8 +14,8 @@ final class UserProfileState {
 
     private let client: ApiClient
     private let defaults = UserDefaults.standard
-    var userId = ""
-    var userEmial = ""
+    private(set) var userId = ""
+    private(set) var userEmail = ""
     var showLoading: VoidClosure?
     var succseed: VoidClosure?
     var failedWithError: ((Error) -> Void)?
@@ -59,7 +59,7 @@ final class UserProfileState {
                 case let .success(user):
                     self.isLoading = false
                     self.userId = user.id
-                    self.userEmial = user.email
+                    self.userEmail = user.email
                     self.succseed?()
                 case let .failure(error):
                     self.isLoading = false

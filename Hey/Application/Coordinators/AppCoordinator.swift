@@ -59,7 +59,7 @@ extension AppCoordinator: AuthCoordinatorDelegate {
                 contentCoordinator.start(animated: true, completion: nil)
             }
         case .didFailToSignIn:
-            // Not implemnent 
+            // Not implemnent
             return
         case .authenticated:
             childCoordinators = []
@@ -67,6 +67,6 @@ extension AppCoordinator: AuthCoordinatorDelegate {
             childCoordinators = [contentCoordinator]
             coordinator.delegate = self
             contentCoordinator.start(animated: true, completion: nil)
-        }
+      }
     }
 }

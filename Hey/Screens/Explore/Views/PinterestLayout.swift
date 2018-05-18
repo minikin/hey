@@ -38,7 +38,6 @@ final class PinterestLayout: UICollectionViewLayout {
 
     override func prepare() {
         // Only calculate once
-        cache = [UICollectionViewLayoutAttributes]()
         guard cache.isEmpty == true, let collectionView = collectionView else {
             return
         }
@@ -88,5 +87,10 @@ final class PinterestLayout: UICollectionViewLayout {
 
     override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         return cache[indexPath.item]
+    }
+
+    override func invalidateLayout() {
+        super.invalidateLayout()
+        cache = []
     }
 }

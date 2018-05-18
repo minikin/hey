@@ -10,9 +10,10 @@
 		DD04F1F8F1AAC1FD8805AFB8 /* libPods-Hey.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40393B20C8418EE43943995D /* libPods-Hey.a */; };
 		FC1900F120AB4767001EFD06 /* Beach.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFC185F20A8D8A20025EDD3 /* Beach.swift */; };
 		FC1900F420AB6CCB001EFD06 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1900F320AB6CCB001EFD06 /* User.swift */; };
-		FC1900F620AB6D7F001EFD06 /* BeachCellState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1900F520AB6D7F001EFD06 /* BeachCellState.swift */; };
+		FC1900F620AB6D7F001EFD06 /* BeachCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1900F520AB6D7F001EFD06 /* BeachCellItem.swift */; };
 		FC1900F820AB728B001EFD06 /* ExploreBeachesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1900F720AB728B001EFD06 /* ExploreBeachesState.swift */; };
 		FC1900FA20AB7FC6001EFD06 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1900F920AB7FC6001EFD06 /* String+Extension.swift */; };
+		FC1C4E5D20B2C6F800EA708A /* TabBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1C4E5C20B2C6F800EA708A /* TabBarItems.swift */; };
 		FC39FA7D20AC45FE00943276 /* ExpoloreBeachesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC39FA7C20AC45FE00943276 /* ExpoloreBeachesAPI.swift */; };
 		FC39FA7F20AC46F900943276 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC39FA7E20AC46F900943276 /* ApiClient.swift */; };
 		FC39FA8220AC502600943276 /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC39FA8120AC502600943276 /* ApiRouter.swift */; };
@@ -103,9 +104,10 @@
 		8FBAB291069F4DD4365C13B1 /* Pods-Hey.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hey/Pods-Hey.debug.xcconfig"; sourceTree = "<group>"; };
 		D0E426E6FD4EF94EB917FB9F /* Pods_Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1900F320AB6CCB001EFD06 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		FC1900F520AB6D7F001EFD06 /* BeachCellState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachCellState.swift; sourceTree = "<group>"; };
+		FC1900F520AB6D7F001EFD06 /* BeachCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachCellItem.swift; sourceTree = "<group>"; };
 		FC1900F720AB728B001EFD06 /* ExploreBeachesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreBeachesState.swift; sourceTree = "<group>"; };
 		FC1900F920AB7FC6001EFD06 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		FC1C4E5C20B2C6F800EA708A /* TabBarItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItems.swift; sourceTree = "<group>"; };
 		FC39FA7C20AC45FE00943276 /* ExpoloreBeachesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoloreBeachesAPI.swift; sourceTree = "<group>"; };
 		FC39FA7E20AC46F900943276 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		FC39FA8120AC502600943276 /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
@@ -218,6 +220,14 @@
 				FC1900F320AB6CCB001EFD06 /* User.swift */,
 			);
 			path = "Response Models";
+			sourceTree = "<group>";
+		};
+		FC1C4E5B20B2C6E100EA708A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FC1C4E5C20B2C6F800EA708A /* TabBarItems.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		FC39FA7B20AC45BA00943276 /* API */ = {
@@ -405,6 +415,7 @@
 				FCAE01A920A7077300CCFF21 /* Coordinators */,
 				FCAE01A820A7075400CCFF21 /* Extensions */,
 				FCAE01A520A7066600CCFF21 /* Resources */,
+				FC1C4E5B20B2C6E100EA708A /* ViewModels */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -559,7 +570,7 @@
 		FCAE01BD20A70B5200CCFF21 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				FC1900F520AB6D7F001EFD06 /* BeachCellState.swift */,
+				FC1900F520AB6D7F001EFD06 /* BeachCellItem.swift */,
 				FC1900F720AB728B001EFD06 /* ExploreBeachesState.swift */,
 			);
 			path = ViewModels;
@@ -844,11 +855,12 @@
 				FCAE01BB20A70B3F00CCFF21 /* ExploreBeachesViewController.swift in Sources */,
 				FCA7CA5820AA306300A45AE6 /* Bool+Extension.swift in Sources */,
 				FCAE01C520A70F4800CCFF21 /* Actionable.swift in Sources */,
-				FC1900F620AB6D7F001EFD06 /* BeachCellState.swift in Sources */,
+				FC1900F620AB6D7F001EFD06 /* BeachCellItem.swift in Sources */,
 				FCFC185720A8CFA90025EDD3 /* UIImage+Asset.swift in Sources */,
 				FCAE01D520A7111E00CCFF21 /* SignInViewController.swift in Sources */,
 				FCFC185E20A8D7940025EDD3 /* BeachCell.swift in Sources */,
 				FCAE018120A7061B00CCFF21 /* AppDelegate.swift in Sources */,
+				FC1C4E5D20B2C6F800EA708A /* TabBarItems.swift in Sources */,
 				FCAE01CF20A710D100CCFF21 /* FavoriteViewController.swift in Sources */,
 				FC1900F820AB728B001EFD06 /* ExploreBeachesState.swift in Sources */,
 				FC997A1920A8A29500514103 /* ContentCoordinator.swift in Sources */,

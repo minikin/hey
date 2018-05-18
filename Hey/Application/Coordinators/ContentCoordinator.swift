@@ -28,20 +28,14 @@ final class ContentCoordinator: Coordinator {
         tabBarVC.view.tintColor = .red
 
         let exploreVC = StoryboardScene.ExploreBeaches.initialScene.instantiate()
-        exploreVC.tabBarItem = UITabBarItem(title: L10n.Explore.Uitabbaritem.Title.explore,
-                                            image: Asset.Explore.explore.image,
-                                            tag: 0)
+        exploreVC.tabBarItem = TabBarItem.explore.item
 
         let favoriteVC = StoryboardScene.Favorite.initialScene.instantiate()
-        favoriteVC.tabBarItem = UITabBarItem(title: L10n.Favorite.Uitabbaritem.Title.favorite,
-                                             image: Asset.Favorite.favorite.image,
-                                             tag: 1)
+        favoriteVC.tabBarItem = TabBarItem.favorite.item
 
         let myProfileVC = StoryboardScene.MyProfile.initialScene.instantiate()
         myProfileVC.delegate = self
-        myProfileVC.tabBarItem = UITabBarItem(title: L10n.Profile.Uitabbaritem.Title.myProfile,
-                                              image: Asset.Profile.profile.image,
-                                              tag: 2)
+        myProfileVC.tabBarItem = TabBarItem.myProfile.item
 
         tabBarVC.viewControllers = [exploreVC, favoriteVC, myProfileVC]
         tabBarVC.selectedIndex = 0
@@ -70,11 +64,11 @@ extension ContentCoordinator: MyProfileViewControllerDelegate {
     func myProfileViewController(_: MyProfileViewController, didNotify action: MyProfileViewController.Action) {
         switch action {
         case .didSignOut:
-            childCoordinators = []
-            cleanup(animated: true) {
-                let authCoordinator = AuthCoordinator(self.baseController)
-                authCoordinator.start(animated: true, completion: nil)
-            }
+          childCoordinators = []
+          cleanup(animated: true) {
+            let authCoordinator = AuthCoordinator(self.baseController)
+            authCoordinator.start(animated: true, completion: nil)
+          }
         }
     }
 }

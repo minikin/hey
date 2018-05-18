@@ -13,7 +13,8 @@ final class ExploreBeachesViewController: UIViewController {
 
     // MARK: - Injections
 
-    private var beachesDataSource = ItemsDataSource(items: [BeachCellState](),
+    private let exploreState = ExploreBeachesState(ExpoloreBeachesAPI())
+    private var beachesDataSource = ItemsDataSource(items: [BeachCellItem](),
                                                     cellDescriptor: { $0.beachCellDescriptor })
 
     // MARK: - IBOutlets
@@ -31,10 +32,9 @@ final class ExploreBeachesViewController: UIViewController {
     // MARK: - Properties
 
     private let layout = PinterestLayout()
-    private let exploreState = ExploreBeachesState(ExpoloreBeachesAPI())
     private var currentPage = 0
+    // Api doesn't provide a way to know numberOfPages
     private let numberOfPages = 15
-    private var shouldShowLoadingCell = false
 
     // MARK: - ViewController LifeCycle
 
@@ -49,28 +49,24 @@ final class ExploreBeachesViewController: UIViewController {
     private func loadBeaches() {
         print("Fetching page \(currentPage)")
         exploreState.fetchBeaches(currentPage)
-        reloadData()
-    }
-
-    private func reloadData() {
-      exploreState.reloadDataOnSuccess = { [unowned self] in
-        self.beachesDataSource.items = self.exploreState.beachCellState
-        DispatchQueue.main.async {
-          self.beachesCollectionView.reloadData()
-          self.layout.prepare()
+        exploreState.reloadDataOnSuccess = { [unowned self] in
+            self.beachesDataSource.items = self.exploreState.beachCellItems
+            DispatchQueue.main.async {
+                self.layout.invalidateLayout()
+                self.beachesCollectionView.reloadData()
+            }
         }
-      }
     }
 
     private func showLoading() {
         exploreState.showLoading = {
-          if self.exploreState.isLoading {
-            self.activityIndicator.startAnimating()
-            self.beachesCollectionView.alpha = 0.0
-          } else {
-            self.activityIndicator.stopAnimating()
-            self.beachesCollectionView.alpha = 1.0
-          }
+            if self.exploreState.isLoading {
+                self.activityIndicator.startAnimating()
+                self.beachesCollectionView.alpha = 0.0
+            } else {
+                self.activityIndicator.stopAnimating()
+                self.beachesCollectionView.alpha = 1.0
+            }
         }
     }
 
@@ -78,17 +74,13 @@ final class ExploreBeachesViewController: UIViewController {
         currentPage += 1
         loadBeaches()
     }
-
-    private func isLoadingIndexPath(_ indexPath: IndexPath) -> Bool {
-      return indexPath.row == exploreState.beachCellState.count - 1
-    }
 }
 
 // MARK: - PinterestLayoutDelegate
 
 extension ExploreBeachesViewController: PinterestLayoutDelegate {
-    func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
-        guard let heightString = exploreState.beachCellState[indexPath.item].imageHeight.cgFloat() else {
+    func collectionView(_: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
+        guard let heightString = exploreState.beachCellItems[indexPath.item].imageHeight.cgFloat() else {
             return 100
         }
         return heightString
@@ -101,8 +93,8 @@ extension ExploreBeachesViewController: UICollectionViewDelegate {
     func collectionView(_: UICollectionView,
                         willDisplay _: UICollectionViewCell,
                         forItemAt indexPath: IndexPath) {
-      if indexPath.item == exploreState.beachCellState.count - 1 && currentPage <= numberOfPages {
-        fetchNextPage()
-      }
+        if indexPath.item == exploreState.beachCellItems.count - 1 && currentPage <= numberOfPages {
+            fetchNextPage()
+        }
     }
 }

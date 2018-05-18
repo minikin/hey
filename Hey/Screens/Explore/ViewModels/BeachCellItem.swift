@@ -9,13 +9,13 @@
 import Services
 import UIKit
 
-struct BeachCellState {
+struct BeachCellItem {
 
     // MARK: - Properties
 
-    let imagePath: String
-    let name: String
-    let imageHeight: String
+    private(set) var imagePath: String
+    private(set) var name: String
+    private(set) var imageHeight: String
 
     // MARK: - Initialisation
 
@@ -26,7 +26,7 @@ struct BeachCellState {
     }
 }
 
-extension BeachCellState {
+extension BeachCellItem {
     func configureBeacCell(_ cell: BeachCell) {
         guard let url = ApiRouter.image(imagePath: imagePath).urlRequest?.url else {
             return
@@ -36,7 +36,7 @@ extension BeachCellState {
     }
 }
 
-extension BeachCellState {
+extension BeachCellItem {
     var beachCellDescriptor: CellDescriptor {
         return CellDescriptor(reuseIdentifier: "BeachCell", configure: configureBeacCell)
     }
